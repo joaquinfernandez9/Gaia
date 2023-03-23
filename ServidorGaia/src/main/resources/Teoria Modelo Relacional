@@ -28,4 +28,43 @@ Esta tabla contiene los valroes Id, nombre tarea, hora comienzo,
 hora final, completada (0 ó 1) y username.
 Sirve para tener una lista con las tareas que tiene cada usuario y saber si las completa.
 
-a
+CREATE TABLE Cuenta (
+    email VARCHAR(255) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
+    username VARCHAR(255) PRIMARY KEY NOT NULL,
+    token VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Verificar (
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    verificado TINYINT NOT NULL DEFAULT 0,
+    fecha_creacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (email, token)
+);
+
+CREATE TABLE Arbol (
+    username VARCHAR(255) NOT NULL,
+    nivel INT NOT NULL,
+    progreso INT NOT NULL DEFAULT 0,
+    PRIMARY KEY (username)
+);
+
+CREATE TABLE Amigos (
+    usuario1 VARCHAR(255) NOT NULL,
+    usuario2 VARCHAR(255) NOT NULL,
+    valor TINYINT NOT NULL DEFAULT 0,
+    fecha_solicitud TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (usuario1, usuario2)
+);
+
+CREATE TABLE Tareas (
+    id INT NOT NULL AUTO_INCREMENT,
+    nombre_tarea VARCHAR(255) NOT NULL,
+    hora_inicio TIME NOT NULL,
+    hora_fin TIME NOT NULL,
+    completada TINYINT NOT NULL DEFAULT 0,
+    username VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (username) REFERENCES Cuenta(username)
+);
