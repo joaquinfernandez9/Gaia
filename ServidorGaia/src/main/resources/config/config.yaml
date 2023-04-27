@@ -1,0 +1,5 @@
+urlDB: jdbc:mysql://dam2.mysql.iesquevedo.es:3335/SergioAlacio_Newspapers?useSSL=false
+user: root
+password: quevedo2dam
+driver: com.mysql.jdbc.Driver
+time: 10

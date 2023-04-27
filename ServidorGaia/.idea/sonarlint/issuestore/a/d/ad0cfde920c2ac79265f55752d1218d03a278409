@@ -1,20 +1,0 @@
-
-l	java:S116"WRename this field "nombre_tarea" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×©Žî
-k	java:S116	"VRename this field "hora_inicio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ì¹æ
-g	java:S116
-"SRename this field "hora_fin" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß×ó
-K
-java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èýÿÿÿÿ
-A
-java:S1068"&Remove this unused "id" private field.(ôç¼Óþÿÿÿÿ
-F
-java:S1068"0Remove this unused "nombre_tarea" private field.(×©Žî
-E
-java:S1068	"/Remove this unused "hora_inicio" private field.(„ì¹æ
-A
-java:S1068
-",Remove this unused "hora_fin" private field.(ß×ó
-I
-java:S1068".Remove this unused "completada" private field.(å· ‘ýÿÿÿÿ
-B
-java:S1068",Remove this unused "username" private field.(‘ó¹²

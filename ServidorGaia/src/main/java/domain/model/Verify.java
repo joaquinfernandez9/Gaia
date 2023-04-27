@@ -2,7 +2,7 @@ package domain.model;
 
 import java.time.LocalDate;
 
-public class Verificar {
+public class Verify {
     private String email;
     private String token;
     private int verificado;

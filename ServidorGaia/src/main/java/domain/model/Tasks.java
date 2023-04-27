@@ -1,8 +1,6 @@
 package domain.model;
 
-import java.time.LocalDate;
-
-public class Tareas {
+public class Tasks {
     private int id;
     private String nombre_tarea;
     // hh:mm:ss

@@ -1,6 +1,6 @@
 package domain.model;
 
-public class Arbol {
+public class Tree {
     private String username;
     private int nivel;
     private int progreso;

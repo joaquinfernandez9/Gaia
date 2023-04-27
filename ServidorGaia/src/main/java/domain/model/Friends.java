@@ -2,7 +2,7 @@ package domain.model;
 
 import java.time.LocalDate;
 
-public class Amigos {
+public class Friends {
     private String usuario1;
     private String usuario2;
     private int valor;
