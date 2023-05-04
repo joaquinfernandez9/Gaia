@@ -9,5 +9,11 @@ W
 'src/main/java/config/Configuration.java,7\f\7f9a1455549e9958f1cfe6993a695569484b133b
 b
 2src/main/java/domain/services/mail/MandarMail.java,d\a\dac58a21be37d7389e654f48db517a20111dc30d
-`
-0src/main/java/domain/services/ServicesLogin.java,1\e\1e71c44715acaca315b101e0d3904c6f291535f5
+l
+<src/main/java/utils/exception/AccountNotActiveException.java,4\3\43936181b3e94851956e8356ae6d8194ccd6f8a8
+W
+'src/main/java/domain/model/Account.java,1\1\11203fec18c233a5840f004845b7184359623957
+h
+8src/main/java/utils/exception/DataBaseDownException.java,9\7\97bd3bf5ae18e24b1580e25cfdd9d05140ba96c2
+Y
+)src/main/java/jakarta/rest/RestLogin.java,c\3\c362a883b530d73e7dee56affa5aa948382f6d7b

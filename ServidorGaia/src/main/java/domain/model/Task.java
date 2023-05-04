@@ -1,6 +1,6 @@
 package domain.model;
 
-public class Tasks {
+public class Task {
     private int id;
     private String nombre_tarea;
     // hh:mm:ss

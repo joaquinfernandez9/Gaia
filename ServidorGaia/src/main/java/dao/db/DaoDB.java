@@ -2,12 +2,11 @@ package dao.db;
 
 
 import config.Configuration;
-import dao.DaoLogin;
+
 import javax.sql.DataSource;
 
 import jakarta.annotation.PreDestroy;
 import jakarta.inject.Inject;
-import lombok.Data;
 import lombok.extern.log4j.Log4j2;
 import jakarta.inject.Named;
 import jakarta.inject.Singleton;

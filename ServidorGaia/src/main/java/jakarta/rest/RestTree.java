@@ -1,4 +1,4 @@
 package jakarta.rest;
 
-public class RestLogin {
+public class RestTree {
 }

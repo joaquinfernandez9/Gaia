@@ -1,14 +1,6 @@
-package dao;
+package domain.services;
 
-import utils.exception.DataBaseDownException;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-public interface DaoFriend {
-
+public interface ServicesFriend {
     int sendRequest(String username1, String username2);
 
     void acceptRequest(String username1, String username2);
@@ -18,5 +10,4 @@ public interface DaoFriend {
     void getFriends(String username);
 
     void getRequests(String username);
-
 }
