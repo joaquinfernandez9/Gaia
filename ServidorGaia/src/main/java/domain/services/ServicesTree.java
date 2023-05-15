@@ -1,8 +1,10 @@
 package domain.services;
 
-public interface ServicesTree {
-    String getLevel(String username);
+import domain.model.Tree;
 
-    String updateLevel(String username);
+public interface ServicesTree {
+    Tree getLevel(String username);
+
+    Tree updateLevel(String username);
 }
 

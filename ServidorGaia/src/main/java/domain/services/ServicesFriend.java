@@ -1,13 +1,17 @@
 package domain.services;
 
+import domain.model.Friend;
+
+import java.util.List;
+
 public interface ServicesFriend {
-    int sendRequest(String username1, String username2);
+    Friend sendRequest(String username1, String username2);
 
-    void acceptRequest(String username1, String username2);
+    Friend acceptRequest(String username1, String username2);
 
-    void rejectRequest(String username1, String username2);
+    Friend rejectRequest(String username1, String username2);
 
-    void getFriends(String username);
+    List<Friend> getFriends(String username);
 
-    void getRequests(String username);
+    List<Friend> getRequests(String username);
 }

@@ -1,6 +1,7 @@
 package domain.services.impl;
 
 import dao.DaoTree;
+import domain.model.Tree;
 import domain.services.ServicesTree;
 import jakarta.inject.Inject;
 
@@ -13,11 +14,14 @@ public class ServicesTreeImpl implements ServicesTree {
         this.tree = tree;
     }
 
-    @Override public String getLevel(String username){
-        return tree.getLevel(username);
+    @Override
+    public Tree getLevel(String username) {
+        return tree.get(username);
     }
 
-    @Override public String updateLevel(String username){
+
+    @Override
+    public Tree updateLevel(String username) {
         return tree.updateLevel(username);
     }
 }

@@ -32,9 +32,9 @@ public class DaoDB {
     private DataSource getHikariPool(){
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setJdbcUrl(config.getUrl());
-        hikariConfig.setJdbcUrl(config.getUser());
-        hikariConfig.setJdbcUrl(config.getPass());
-        hikariConfig.setJdbcUrl(config.getDriver());
+        hikariConfig.setUsername(config.getUser());
+        hikariConfig.setPassword(config.getPass());
+        hikariConfig.setDriverClassName(config.getDriver());
         hikariConfig.setMaximumPoolSize(4);
 
         hikariConfig.addDataSourceProperty("cachePrepStmts", true);

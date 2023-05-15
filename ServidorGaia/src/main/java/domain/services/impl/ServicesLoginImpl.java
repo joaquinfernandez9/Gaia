@@ -7,9 +7,10 @@ import jakarta.inject.Inject;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
 
 public class ServicesLoginImpl implements ServicesLogin {
-    private DaoLogin login;
+    private final DaoLogin login;
 
     @Inject
     public ServicesLoginImpl(DaoLogin login) {
@@ -17,25 +18,32 @@ public class ServicesLoginImpl implements ServicesLogin {
     }
 
 
-    @Override public Account login(String user, String password){
-        if (login.doLogin(user, password)){
+    @Override
+    public Account login(String user, String password) {
+        if (login.doLogin(user, password)) {
             return login.login(user, password);
-        }else{
+        } else {
             return null;
         }
     }
 
-    @Override public boolean register(Account acc){
-        acc.setActivationTime(LocalTime.from(LocalDateTime.now()));
-        return login.register(acc);
+    @Override
+    public boolean register(Account acc, String activationCode, LocalDateTime activationMoment) {
+        return login.register(acc, activationCode, activationMoment);
     }
 
-    @Override public boolean activate(String activationCode, LocalDateTime activationMoment){
-        if (login.checkActive(activationCode, activationMoment)){
+    @Override
+    public boolean activate(String activationCode, LocalDateTime activationMoment) {
+        if (login.checkActive(activationCode, activationMoment)) {
             return login.activate(activationCode);
-        }else{
+        } else {
             return false;
         }
+    }
+
+    @Override
+    public List<Account> get() {
+        return login.get();
     }
 
 

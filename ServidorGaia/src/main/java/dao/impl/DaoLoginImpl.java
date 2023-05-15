@@ -7,11 +7,12 @@ import domain.model.Account;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.NotFoundException;
 import lombok.extern.log4j.Log4j2;
-import utils.exception.AccountNotActiveException;
-import utils.exception.DataBaseDownException;
+import domain.error.AccountNotActiveException;
+import domain.error.DataBaseDownException;
 
 import java.sql.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Log4j2
 public class DaoLoginImpl implements DaoLogin {
@@ -75,7 +76,7 @@ public class DaoLoginImpl implements DaoLogin {
     }
 
     @Override
-    public boolean register(Account acc) {
+    public boolean register(Account acc, String activationCode, LocalDateTime activationMoment) {
         try (Connection con = db.getConnection()) {
             PreparedStatement register = con
                     .prepareStatement(Queries.INSERT_INTO_ACCOUNT_EMAIL_PASSWORD_USERNAME_ACTIVATED_ACTIVATION_CODE_ACTIVATION_TIME_VALUES);
@@ -83,11 +84,11 @@ public class DaoLoginImpl implements DaoLogin {
             register.setString(2, acc.getPassword());
             register.setString(3, acc.getUsername());
             register.setInt(4, acc.getActivated());
-            register.setString(5, acc.getActivationCode());
-            register.setTime(6, Time.valueOf(acc.getActivationTime()));
-            register.executeUpdate();
-            ResultSet rs = register.getGeneratedKeys();
-            if (rs.next()) {
+            register.setString(5, activationCode);
+            register.setTime(6, Time.valueOf(activationMoment.toLocalTime()));
+            int rs = register.executeUpdate();
+//            int rs = register.executeQuery();
+            if (rs==1) {
                 return true;
             } else {
                 throw new NotFoundException("User or password were incorrect.");
@@ -126,6 +127,27 @@ public class DaoLoginImpl implements DaoLogin {
         } catch (SQLException e) {
             log.error(e.getMessage());
             return false;
+        }
+    }
+
+    public List<Account> get(){
+        try (Connection con = db.getConnection()) {
+            PreparedStatement ps = con.prepareStatement(Queries.GET_ALL_USERS);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                Account account = new Account();
+                account.setEmail(rs.getString(1));
+                account.setPassword(rs.getString(2));
+                account.setUsername(rs.getString(3));
+                account.setActivated(rs.getInt(4));
+                account.setActivationCode(rs.getString(5));
+                account.setActivationTime(rs.getTime(6).toLocalTime());
+                return List.of(account);
+            } else {
+                throw new NotFoundException("No user found");
+            }
+        }   catch (SQLException e) {
+            throw new DataBaseDownException(e.getMessage());
         }
     }
 

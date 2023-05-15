@@ -1,8 +1,11 @@
 package domain.services.impl;
 
 import dao.DaoTask;
+import domain.model.Task;
 import domain.services.ServicesTask;
 import jakarta.inject.Inject;
+
+import java.util.List;
 
 public class ServicesTaskImpl implements ServicesTask {
 
@@ -13,27 +16,27 @@ public class ServicesTaskImpl implements ServicesTask {
         this.task = task;
     }
 
-    @Override public String addTask(String taskName, String initialTime, String endTime, String username){
-        return task.addTask(taskName, initialTime, endTime, username);
+    @Override public Task addTask(String taskName, String initialTime, String endTime, String username){
+        return task.add(taskName, initialTime, endTime, username);
     }
 
-    @Override public String getTask(String taskName, String username){
-        return task.getTask(taskName, username);
+    @Override public Task getTask(String taskName, String username){
+        return task.get(taskName, username);
     }
 
-    @Override public String deleteTask(String taskName, String username){
-        return task.deleteTask(taskName, username);
+    @Override public Task deleteTask(String taskName, String username){
+        return task.delete(taskName, username);
     }
 
-    @Override public String getTasks(String username){
-        return task.getTasks(username);
+    @Override public List<Task> getTasks(String username){
+        return task.getAllByUser(username);
     }
 
-    @Override public String updateTask(String taskName, String username){
-        return task.updateTask(taskName, username);
+    @Override public Task updateTask(String taskName, String username){
+        return task.update(taskName, username);
     }
 
-    @Override public String deleteCompletedTasks(String username){
+    @Override public List<Task> deleteCompletedTasks(String username){
         return task.deleteCompletedTasks(username);
     }
 

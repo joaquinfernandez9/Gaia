@@ -3,6 +3,7 @@ package dao.queries;
 public class Queries {
 
     public static final String SELECT_FROM_TREE_WHERE_USERNAME = "select * from tree where username = ?";
+    public static final String UPDATE_TREE_SET_PROGRESS_0_LEVEL_LEVEL_PLUS_1_WHERE_USERNAME = "update tree set progress = 0, level = ? where username = ?";
     public static final String UPDATE_TREE_SET_LEVEL_LEVEL_1_PROGRESS_0_WHERE_USERNAME = "UPDATE tree SET level = level+1, progress = 0 WHERE username = ?";
     public static final String INSERT_INTO_TASK_ID_TASK_NAME_INITIAL_TIME_END_TIME_COMPLETED_USERNAME_VALUES_0 = "insert into task (id, task_name, initial_time, end_time, completed, username) values (?, ?, ?, ?, 0, ?)";
     public static final String SELECT_FROM_TASK_WHERE_TASK_NAME_AND_USERNAME = "select * from task where task_name = ? and username = ?";
@@ -21,4 +22,6 @@ public class Queries {
     public static final String DELETE_FROM_FRIENDS_WHERE_USERNAME_1_AND_USERNAME_2 = "DELETE FROM friends WHERE username1 = ? AND username2 = ?";
     public static final String SELECT_FROM_FRIENDS_WHERE_USERNAME_1_OR_USERNAME_2_AND_VALUE_1 = "SELECT * FROM friends WHERE (username1 = ? OR username2 = ?) AND value = 1";
     public static final String SELECT_FROM_FRIENDS_WHERE_USERNAME_2_AND_VALUE_0 = "SELECT * FROM friends WHERE username2 = ? AND value = 0";
+
+    public static final String GET_ALL_USERS = "SELECT * FROM account";
 }

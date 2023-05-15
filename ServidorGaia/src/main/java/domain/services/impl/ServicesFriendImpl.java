@@ -1,36 +1,43 @@
 package domain.services.impl;
 
 import dao.DaoFriend;
+import domain.model.Friend;
 import domain.services.ServicesFriend;
 import jakarta.inject.Inject;
 
+import java.util.List;
+
 public class ServicesFriendImpl implements ServicesFriend {
 
-    private DaoFriend friend;
+    private final DaoFriend dao;
 
     @Inject
-    public ServicesFriendImpl(DaoFriend friend) {
-        this.friend = friend;
+    public ServicesFriendImpl(DaoFriend dao) {
+        this.dao = dao;
     }
 
-    @Override public int sendRequest(String username1, String username2){
-        return friend.sendRequest(username1, username2);
+    @Override
+    public Friend sendRequest(String username1, String username2) {
+        return dao.sendRequest(username1, username2);
     }
 
-    @Override public void acceptRequest(String username1, String username2){
-        friend.acceptRequest(username1, username2);
+    @Override
+    public Friend acceptRequest(String username1, String username2) {
+        return dao.acceptRequest(username1, username2);
     }
 
-    @Override public void rejectRequest(String username1, String username2){
-        friend.rejectRequest(username1, username2);
+    @Override
+    public Friend rejectRequest(String username1, String username2) {
+        return dao.rejectRequest(username1, username2);
     }
 
-    @Override public void getFriends(String username){
-        friend.getFriends(username);
+    @Override
+    public List<Friend> getFriends(String username) {
+        return dao.getFriends(username);
     }
 
-    @Override public void getRequests(String username){
-        friend.getRequests(username);
+    @Override
+    public List<Friend> getRequests(String username) {
+        return dao.getRequests(username);
     }
-
 }

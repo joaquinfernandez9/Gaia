@@ -3,6 +3,7 @@ package dao.impl;
 import dao.DaoTree;
 import dao.db.DaoDB;
 import dao.queries.Queries;
+import domain.model.Tree;
 import jakarta.inject.Inject;
 import lombok.extern.log4j.Log4j2;
 
@@ -20,7 +21,8 @@ public class DaoTreeImpl implements DaoTree {
         this.db = db;
     }
 
-    @Override public String getLevel(String username) {
+    @Override
+    public Tree get(String username) {
         try (Connection con = db.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
                     Queries.SELECT_FROM_TREE_WHERE_USERNAME
@@ -28,17 +30,21 @@ public class DaoTreeImpl implements DaoTree {
             ps.setString(1, username);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                return rs.getString("level");
+                return new Tree(
+                        rs.getString("username"),
+                        rs.getInt("level"),
+                        rs.getInt("progress"));
             } else {
-                return "Error getting level";
+                return null;
             }
         } catch (Exception e) {
             log.error(e.getMessage());
-            return "Error getting level";
+            return null;
         }
     }
 
-    @Override public String updateLevel(String username) {
+    @Override
+    public Tree updateLevel(String username) {
         try (Connection con = db.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
                     Queries.UPDATE_TREE_SET_LEVEL_LEVEL_1_PROGRESS_0_WHERE_USERNAME
@@ -47,13 +53,16 @@ public class DaoTreeImpl implements DaoTree {
             ps.executeUpdate();
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                return rs.getString("level");
+                return new Tree(
+                        rs.getString("username"),
+                        rs.getInt("level"),
+                        rs.getInt("progress"));
             } else {
-                return "Error updating level";
+                return null;
             }
         } catch (Exception e) {
             log.error(e.getMessage());
-            return "Error updating level";
+            return null;
         }
     }
 }
