@@ -35,11 +35,9 @@ public class ServletActivation extends HttpServlet {
         IWebExchange webExchange = JakartaServletWebApplication.buildApplication(getServletContext())
                 .buildExchange(request, response);
         WebContext context = new WebContext(webExchange);
-
         String template = "activation";
         String mensaje;
         String codigo = request.getParameter("codigo");
-
         try {
             servicesLogin.activate(codigo, LocalDateTime.now());
             request.getSession().setAttribute("login", true);
@@ -50,8 +48,6 @@ public class ServletActivation extends HttpServlet {
             mensaje = e.getMessage();
             request.setAttribute("mensaje", mensaje);
         }
-
         templateEngine.process(template, context, response.getWriter());
-
     }
 }

@@ -32,6 +32,7 @@ public class ServicesLoginImpl implements ServicesLogin {
         return login.register(acc, activationCode, activationMoment);
     }
 
+    //TODO: login.checkActive returns false. Why?
     @Override
     public boolean activate(String activationCode, LocalDateTime activationMoment) {
         if (login.checkActive(activationCode, activationMoment)) {
