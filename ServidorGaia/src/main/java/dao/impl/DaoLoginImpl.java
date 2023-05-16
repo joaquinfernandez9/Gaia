@@ -12,6 +12,7 @@ import domain.error.DataBaseDownException;
 
 import java.sql.*;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @Log4j2
@@ -88,7 +89,7 @@ public class DaoLoginImpl implements DaoLogin {
             register.setTime(6, Time.valueOf(activationMoment.toLocalTime()));
             int rs = register.executeUpdate();
 //            int rs = register.executeQuery();
-            if (rs==1) {
+            if (rs == 1) {
                 return true;
             } else {
                 throw new NotFoundException("User or password were incorrect.");
@@ -106,10 +107,12 @@ public class DaoLoginImpl implements DaoLogin {
         try (Connection con = db.getConnection()) {
             PreparedStatement ps = con.prepareStatement(Queries.SELECT_FROM_ACCOUNT_WHERE_ACTIVATION_CODE_AND_ACTIVATION_TIME);
             ps.setString(1, activationCode);
-            ps.setTime(2, Time.valueOf(activationMoment.toLocalTime()));
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                active = true;
+                LocalTime dbActivationTime = rs.getTime(1).toLocalTime();
+                if (dbActivationTime.isAfter(activationMoment.toLocalTime().minusMinutes(5))) {
+                    active = true;
+                }
             }
         } catch (SQLException e) {
             log.error(e.getMessage());
@@ -130,7 +133,7 @@ public class DaoLoginImpl implements DaoLogin {
         }
     }
 
-    public List<Account> get(){
+    public List<Account> get() {
         try (Connection con = db.getConnection()) {
             PreparedStatement ps = con.prepareStatement(Queries.GET_ALL_USERS);
             ResultSet rs = ps.executeQuery();
@@ -146,7 +149,7 @@ public class DaoLoginImpl implements DaoLogin {
             } else {
                 throw new NotFoundException("No user found");
             }
-        }   catch (SQLException e) {
+        } catch (SQLException e) {
             throw new DataBaseDownException(e.getMessage());
         }
     }

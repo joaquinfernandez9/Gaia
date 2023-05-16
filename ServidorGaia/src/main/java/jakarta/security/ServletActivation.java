@@ -41,7 +41,7 @@ public class ServletActivation extends HttpServlet {
         try {
             servicesLogin.activate(codigo, LocalDateTime.now());
             request.getSession().setAttribute("login", true);
-            mensaje = "Usuario activado. Vuelva a la aplicación para iniciar sesión";
+            mensaje = "User is now active.";
             request.setAttribute("mensaje", mensaje);
         } catch (Exception e) {
             template = "error";
