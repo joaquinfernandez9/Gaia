@@ -1,8 +1,10 @@
 package domain.model;
 
+import jakarta.persistence.Entity;
 import lombok.Data;
 
 @Data
+@Entity
 public class Task {
     private int id;
     private String nombre_tarea;

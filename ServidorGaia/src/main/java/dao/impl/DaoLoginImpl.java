@@ -4,6 +4,7 @@ import dao.DaoLogin;
 import dao.db.DaoDB;
 import dao.queries.Queries;
 import domain.model.Account;
+import domain.model.Task;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.NotFoundException;
 import lombok.extern.log4j.Log4j2;
@@ -13,6 +14,9 @@ import domain.error.DataBaseDownException;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Log4j2
@@ -37,7 +41,6 @@ public class DaoLoginImpl implements DaoLogin {
                 account.setEmail(rs.getString(1));
                 account.setPassword(rs.getString(2));
                 account.setUsername(rs.getString(3));
-                account.setToken(rs.getString(4));
                 account.setActivated(rs.getInt(5));
                 account.setActivationCode(rs.getString(6));
                 account.setActivationTime(rs.getTime(7).toLocalTime());
@@ -86,9 +89,8 @@ public class DaoLoginImpl implements DaoLogin {
             register.setString(3, acc.getUsername());
             register.setInt(4, acc.getActivated());
             register.setString(5, activationCode);
-            register.setTime(6, Time.valueOf(activationMoment.toLocalTime()));
+            register.setTimestamp(6, Timestamp.valueOf(activationMoment));
             int rs = register.executeUpdate();
-//            int rs = register.executeQuery();
             if (rs == 1) {
                 return true;
             } else {
@@ -137,21 +139,28 @@ public class DaoLoginImpl implements DaoLogin {
         try (Connection con = db.getConnection()) {
             PreparedStatement ps = con.prepareStatement(Queries.GET_ALL_USERS);
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                Account account = new Account();
-                account.setEmail(rs.getString(1));
-                account.setPassword(rs.getString(2));
-                account.setUsername(rs.getString(3));
-                account.setActivated(rs.getInt(4));
-                account.setActivationCode(rs.getString(5));
-                account.setActivationTime(rs.getTime(6).toLocalTime());
-                return List.of(account);
-            } else {
-                throw new NotFoundException("No user found");
-            }
+            return readRS(rs);
         } catch (SQLException e) {
             throw new DataBaseDownException(e.getMessage());
         }
+    }
+
+    private List<Account> readRS(ResultSet rs) {
+        List<Account> response = new ArrayList<>();
+        try {
+            while (rs.next()) {
+                response.add(new Account(rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("email"),
+                        rs.getInt("activated"),
+                        rs.getString("activation_code"),
+                        rs.getTime("activation_time").toLocalTime()));
+            }
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            return Collections.emptyList();
+        }
+        return response;
     }
 
 

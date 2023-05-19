@@ -11,8 +11,6 @@ Y
 )src/main/java/dao/impl/DaoFriendImpl.java,1\c\1ccdb56783dcfbee24d207c85504dc9f6393acf8
 N
 src/main/java/dao/DaoTask.java,f\f\ff22330c7906f4523be1255e51d39bb64f2a11b9
-W
-'src/main/java/dao/impl/DaoTaskImpl.java,2\2\2295d9a80e4b114ca7a09fbbc44c1112eee79ff3
 N
 src/main/java/dao/DaoTree.java,8\2\82af20824cff5212fe8986458b4d1ede2b37f4d2
 W
@@ -23,8 +21,6 @@ e
 0src/main/java/jakarta/rest/JAXRSApplication.java,4\1\418ec6364e498240ce1f0314881a7cd9fc30a7f7
 N
 src/main/java/module-info.java,1\c\1c89a5491fbfda3fb050196d6a239f20200296e7
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 a
 1src/main/java/domain/services/ServicesFriend.java,1\a\1a961cf382a5f35ef01513aeae8e7538ee307bfe
 _
@@ -43,3 +39,43 @@ a
 0src/main/java/domain/services/ServicesLogin.java,1\e\1e71c44715acaca315b101e0d3904c6f291535f5
 a
 1src/main/webapp/WEB-INF/templates/activation.html,2\8\281bcc0109484b8d47d5240feedf99884c5c3a1b
+Z
+*src/main/java/jakarta/rest/RestFriend.java,7\3\73672981692c75b6a19ece28c0e32b3770f79844
+X
+(src/main/java/jakarta/rest/RestTask.java,0\0\0045fc8ba362fb135c6508d29ddc8f433608e4dc
+e
+5src/main/java/jakarta/listener/ThymeLeafListener.java,3\a\3add5ffd9e4c675e24360a4f166f56a92689c87e
+X
+(src/main/java/jakarta/rest/RestTree.java,0\4\04a25ddd9cb7f4e23a4ba37c8f9973d4a774d49e
+V
+&src/main/java/domain/model/Friend.java,1\9\198f046d95f6b54f8ea39d443015037b280bfd06
+T
+$src/main/java/domain/model/Tree.java,4\b\4b35d40d7c9fc35b022e1f73b7a276447d8a128d
+V
+&src/main/java/domain/model/Verify.java,5\3\531472504a9ec77bafd7046bc55a81b6f8675a60
+j
+:src/main/java/domain/services/impl/ServicesFriendImpl.java,d\f\df460c82329be37adf0b4960a73d4c3fb73f75d8
+O
+src/main/java/dao/DaoLogin.java,8\7\87d42a8a6967e707d6c44eb756c4666397d7a7d2
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+V
+&src/main/java/dao/queries/Queries.java,d\5\d56df624f30719235784b381372104ed326d3ed4
+e
+5src/main/java/jakarta/security/ServletActivation.java,a\3\a39a2909a351ba8fedbc8d7ca8eb0fd732e42cc4
+i
+9src/main/java/domain/services/impl/ServicesLoginImpl.java,d\2\d2a5a00955d46fd803b5055122c9432031592d51
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+X
+(src/main/java/dao/impl/DaoLoginImpl.java,d\c\dc93d87f6f192408bc0bee328c8f77e509e08153
+W
+'src/main/java/dao/impl/DaoTaskImpl.java,2\2\2295d9a80e4b114ca7a09fbbc44c1112eee79ff3
+[
++src/main/java/jakarta/rest/RestAccount.java,e\c\ecaa89188ede2de8ed0582a35d8c8cd8bf76aa45
+T
+$src/main/java/domain/model/Task.java,0\8\08d9774b9a95650c303d0fe9bf9106bcf8d6227d
+W
+'src/main/java/domain/model/Account.java,1\1\11203fec18c233a5840f004845b7184359623957
+R
+"src/main/java/config/Solution.java,e\6\e660b90e1de7198a1fbcd782f44dbc7cddd9fe53
