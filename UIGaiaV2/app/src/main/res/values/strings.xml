@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UIGaiaV2</string>
+    <string name="title_tree">Tree</string>
+    <string name="title_task">Tasks</string>
+    <string name="title_friend">Friends</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="img">img</string>
+    <string name="login">Login</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+</resources>

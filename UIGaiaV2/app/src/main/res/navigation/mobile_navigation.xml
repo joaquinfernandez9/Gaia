@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_tree"
+        android:name="com.example.uigaiav2.ui.tree.TreeFragment"
+        android:label="@string/title_tree"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_task"
+        android:name="com.example.uigaiav2.ui.task.TaskFragment"
+        android:label="@string/title_task"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_friends"
+        android:name="com.example.uigaiav2.ui.friend.FriendsFragment"
+        android:label="@string/title_friend"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.uigaiav2.ui.login.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_register"
+            app:destination="@id/navigation_register" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_tree"
+            app:destination="@id/navigation_tree" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.example.uigaiav2.ui.register.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+</navigation>

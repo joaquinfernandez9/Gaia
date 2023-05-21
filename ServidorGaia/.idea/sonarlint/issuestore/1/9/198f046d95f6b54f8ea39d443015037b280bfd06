@@ -1,5 +1,0 @@
-
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÛ˜Ç
-o	java:S116"ZRename this field "fecha_solicitud" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ¦¥„
-O
-java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ
