@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_tree"
-        android:name="com.example.uigaiav2.ui.tree.TreeFragment"
+        android:name="com.example.uigaiav2.framework.tree.TreeFragment"
         android:label="@string/title_tree"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_task"
-        android:name="com.example.uigaiav2.ui.task.TaskFragment"
+        android:name="com.example.uigaiav2.framework.task.TaskFragment"
         android:label="@string/title_task"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_friends"
-        android:name="com.example.uigaiav2.ui.friend.FriendsFragment"
+        android:name="com.example.uigaiav2.framework.friend.FriendsFragment"
         android:label="@string/title_friend"
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.example.uigaiav2.ui.login.LoginFragment"
+        android:name="com.example.uigaiav2.framework.login.LoginFragment"
         android:label="@string/login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/navigation_register"
-        android:name="com.example.uigaiav2.ui.register.RegisterFragment"
+        android:name="com.example.uigaiav2.framework.register.RegisterFragment"
         android:label="@string/register"
         tools:layout="@layout/fragment_register" >
         <action

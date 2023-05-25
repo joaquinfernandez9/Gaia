@@ -4,12 +4,9 @@ package jakarta.rest;
 import domain.model.Tree;
 import domain.services.ServicesTree;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 
-//@Path("/tree")
+@Path("/tree")
 @Produces("application/json")
 @Consumes("application/json")
 public class RestTree {
@@ -22,15 +19,15 @@ public class RestTree {
     }
 
 
-    @POST
-    @Path("/getTree")
-    public Tree addTree(String username) {
+    @GET
+    @Path("/getTree/{username}")
+    public Tree get(@PathParam("username") String username) {
         return tree.getLevel(username);
     }
 
     @POST
-    @Path("/updateLevel")
-    public Tree updateLevel(String username) {
+    @Path("/updateLevel/{username}")
+    public Tree updateLevel(@PathParam("username")String username) {
         return tree.updateLevel(username);
     }
 

@@ -10,4 +10,6 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="email">Email</string>
     <string name="register">Register</string>
+    <string name="remember_me">Remember me!</string>
+    <string name="new_account">New Account?</string>
 </resources>

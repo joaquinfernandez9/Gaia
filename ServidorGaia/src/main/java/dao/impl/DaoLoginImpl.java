@@ -41,9 +41,9 @@ public class DaoLoginImpl implements DaoLogin {
                 account.setEmail(rs.getString(1));
                 account.setPassword(rs.getString(2));
                 account.setUsername(rs.getString(3));
-                account.setActivated(rs.getInt(5));
-                account.setActivationCode(rs.getString(6));
-                account.setActivationTime(rs.getTime(7).toLocalTime());
+                account.setActivated(rs.getInt(4));
+                account.setActivationCode(rs.getString(5));
+                account.setActivationTime(rs.getTime(6).toLocalTime());
                 return account;
             } else {
                 throw new NotFoundException("No user found");
@@ -82,6 +82,7 @@ public class DaoLoginImpl implements DaoLogin {
     @Override
     public boolean register(Account acc, String activationCode, LocalDateTime activationMoment) {
         try (Connection con = db.getConnection()) {
+            con.setAutoCommit(false);
             PreparedStatement register = con
                     .prepareStatement(Queries.INSERT_INTO_ACCOUNT_EMAIL_PASSWORD_USERNAME_ACTIVATED_ACTIVATION_CODE_ACTIVATION_TIME_VALUES);
             register.setString(1, acc.getEmail());
@@ -92,6 +93,7 @@ public class DaoLoginImpl implements DaoLogin {
             register.setTimestamp(6, Timestamp.valueOf(activationMoment));
             int rs = register.executeUpdate();
             if (rs == 1) {
+                con.commit();
                 return true;
             } else {
                 throw new NotFoundException("User or password were incorrect.");
@@ -125,10 +127,36 @@ public class DaoLoginImpl implements DaoLogin {
     @Override
     public boolean activate(String activationCode) {
         try (Connection con = db.getConnection()) {
+            con.setAutoCommit(false);
             PreparedStatement ps = con.prepareStatement(Queries.UPDATE_ACCOUNT_SET_ACTIVATED_1_WHERE_ACTIVATION_CODE);
             ps.setString(1, activationCode);
-            ps.executeUpdate();
-            return true;
+            int rs = ps.executeUpdate();
+            if (rs == 1){
+                PreparedStatement getUser = con.prepareStatement(Queries.SELECT_FROM_ACCOUNT_WHERE_ACTIVATION_CODE);
+                getUser.setString(1, activationCode);
+                ResultSet rs1 = getUser.executeQuery();
+                rs1.next();
+                Account acc = new Account(  rs1.getString(1),
+                                            rs1.getString(2),
+                                            rs1.getString(3),
+                                            rs1.getInt(4),
+                                            rs1.getString(5),
+                                            rs1.getTime(6).toLocalTime());
+
+                PreparedStatement createTree = con.prepareStatement(Queries.INSERT_INTO_TREE_USERNAME_VALUES);
+                createTree.setString(1, acc.getUsername());
+                int rs2 = createTree.executeUpdate();
+                if (rs2 == 1) {
+                    con.commit();
+                    return true;
+                } else {
+                    con.rollback();
+                    throw new NotFoundException("User or password were incorrect.");
+                }
+            } else {
+                throw new NotFoundException("User or password were incorrect.");
+            }
+
         } catch (SQLException e) {
             log.error(e.getMessage());
             return false;

@@ -1,28 +1,45 @@
 package domain.model;
 
-import jakarta.persistence.Entity;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
-@Entity
 public class Task {
     private int id;
-    private String nombre_tarea;
+    private String taskName;
     // hh:mm:ss
-    private String hora_inicio;
-    private String hora_fin;
-    private int completada;
+    private LocalDateTime initTime;
+    private LocalDateTime endTime;
+    private int completed;
     private String username;
 
     public Task() {
     }
 
-    public Task(int id, String nombre_tarea, String hora_inicio, String hora_fin, int completada, String username) {
+    public Task(String taskName) {
+        this.taskName = taskName;
+    }
+
+    public Task(String taskName, LocalDateTime initTime, LocalDateTime endTime, int completed, String username) {
+        this.taskName = taskName;
+        this.initTime = initTime;
+        this.endTime = endTime;
+        this.completed = completed;
+        this.username = username;
+    }
+
+    public Task(int id, String taskName, LocalDateTime initTime, LocalDateTime endTime, int completada, String username) {
         this.id = id;
-        this.nombre_tarea = nombre_tarea;
-        this.hora_inicio = hora_inicio;
-        this.hora_fin = hora_fin;
-        this.completada = completada;
+        this.taskName = taskName;
+        this.initTime = initTime;
+        this.endTime = endTime;
+        this.completed = completada;
+        this.username = username;
+    }
+
+    public Task(String taskName, String username) {
+        this.taskName = taskName;
         this.username = username;
     }
 }

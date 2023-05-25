@@ -1,19 +1,20 @@
 package domain.services;
 
+import domain.model.Account;
 import domain.model.Task;
 
 import java.util.List;
 
 public interface ServicesTask {
-    Task addTask(String taskName, String initialTime, String endTime, String username);
+    Task add(Task task);
 
-    Task getTask(String taskName, String username);
+    Task get(Task task);
 
-    Task deleteTask(String taskName, String username);
+    Task delete(Task task);
 
-    List<Task> getTasks(String username);
+    List<Task> get(Account account);
 
-    Task updateTask(String taskName, String username);
+    Task update(Task task);
 
-    List<Task> deleteCompletedTasks(String username);
+    int deleteCompletedTasks(Account account);
 }

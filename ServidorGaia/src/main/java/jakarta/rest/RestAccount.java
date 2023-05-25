@@ -40,17 +40,10 @@ public class RestAccount {
         return Response.ok(log.get()).build();
     }
 
-
     @POST
-    @Path("/login")
-    public Account login() {
-        String header = req.getHeader("Authorization");
-        String[] values = header.split("\\s+");
-        String base64Credentials = values[1];
-        String credentials = new String(java.util.Base64.getDecoder().decode(base64Credentials));
-        String[] userPass = credentials.split(":", 2);
-        Account credentials1 = new Account(userPass[0], userPass[1]);
-        return log.login(credentials1.getUsername(), credentials1.getPassword());
+    @Path("/log")
+    public Response login(Account acc) {
+        return Response.accepted(log.login(acc.getUsername(), acc.getPassword())).build();
     }
 
     @POST
@@ -66,12 +59,10 @@ public class RestAccount {
                             "<a href=\"http://192.168.1.102:8080/ServidorGaia-1.0-SNAPSHOT/activate?codigo=" + activationCode+ "\"> Activar cuenta </a>",
                     "Activacion de cuenta"
             );
-            return Response.status(Response.Status.CREATED).build();
+            return Response.status(Response.Status.CREATED).entity(account).build();
         } else {
             return Response.status(Response.Status.CONFLICT).build();
         }
-
     }
-
 
 }

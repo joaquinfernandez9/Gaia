@@ -22,6 +22,10 @@ public class Account {
     public Account() {
     }
 
+    public Account(String username) {
+        this.username = username;
+    }
+
     public Account(String email, String password, String username, int activated, String activationCode, LocalTime activationTime) {
         this.email = email;
         this.password = password;
@@ -36,4 +40,9 @@ public class Account {
         this.username = username;
     }
 
+    public Account(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 }

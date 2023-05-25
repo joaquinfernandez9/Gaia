@@ -5,15 +5,15 @@ import lombok.Data;
 @Data
 public class Tree {
     private String username;
-    private int nivel;
-    private int progreso;
+    private int level;
+    private int progress;
 
     public Tree() {
     }
 
     public Tree(String username, int nivel, int progreso) {
         this.username = username;
-        this.nivel = nivel;
-        this.progreso = progreso;
+        this.level = nivel;
+        this.progress = progreso;
     }
 }

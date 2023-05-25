@@ -1,63 +1,76 @@
 package jakarta.rest;
 
 
+import domain.model.Account;
 import domain.model.Task;
 import domain.services.ServicesTask;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Response;
 
 import java.util.List;
 
-//@Path("/task")
+@Path("/task")
 @Produces("application/json")
 @Consumes("application/json")
 public class RestTask {
-    private final ServicesTask task;
+    private final ServicesTask taskService;
 
     @Inject
     public RestTask(ServicesTask task) {
-        this.task = task;
+        this.taskService = task;
     }
 
     @POST
     @Path("/addTask")
-    public Task addTask(String username, String taskName, String taskDescription, String taskDate) {
-        return task.addTask(username, taskName, taskDescription, taskDate);
+    public Response addTask(Task task) {
+        Task taskResponse = taskService.add(task);
+        if (taskResponse == null) return Response.status(Response.Status.BAD_REQUEST).build();
+        else return Response.ok(taskResponse).build();
     }
 
-    @POST
-    @Path("/getTask")
-    public Task getTask(String username, String taskName) {
-        return task.getTask(username, taskName);
+    @GET
+    @Path("/getTask/{username}/{taskName}")
+    public Response getTask(@PathParam("username") String username, @PathParam("taskName") String taskName) {
+        Task task = taskService.get(new Task(taskName, username));
+        if (task == null) {
+            return Response.status(404).build();
+        } else {
+            return Response.ok(task).build();
+        }
+
     }
 
-    @POST
-    @Path("/deleteTask")
-    public Task deleteTask(String username, String taskName) {
-        return task.deleteTask(username, taskName);
+    @DELETE
+    @Path("/deleteTask/{username}/{taskName}")
+    public Response deleteTask(@PathParam("username") String username, @PathParam("taskName") String taskName) {
+        Task task = new Task(taskName, username);
+        return Response.ok(taskService.delete(task)).build();
     }
 
-    @POST
-    @Path("/getTasks")
-    public List<Task> getTasks(String username) {
-        return task.getTasks(username);
+    @GET
+    @Path("/getTasks/{username}")
+    public List<Task> getTasks(@PathParam("username") String username) {
+        return taskService.get(new Account(username));
     }
 
-    @POST
+    @PUT
     @Path("/updateTask")
-    public Task updateTask(String username, String taskName) {
-        return task.updateTask(taskName, username);
+    public Task updateTask(Task task) {
+        return taskService.update(task);
     }
 
-    @POST
-    @Path("/deleteCompletedTasks")
-    public List<Task> deleteCompletedTasks(String username) {
-        return task.deleteCompletedTasks(username);
+    @DELETE
+    @Path("/deleteCompletedTasks/{username}")
+    public Response deleteCompletedTasks(@PathParam("username") String username) {
+        int rs = taskService.deleteCompletedTasks(new Account(username));
+        if (rs == 0) {
+            return Response.status(404).build();
+        } else {
+            return Response.ok(rs).build();
+        }
     }
-
 
 
 }

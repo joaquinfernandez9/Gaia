@@ -26,7 +26,6 @@ public class Configuration {
             user =p.getProperty("user");
             pass =p.getProperty("password");
             driver =p.getProperty("driver");
-            time =Integer.parseInt(p.getProperty("time"));
         } catch (Exception e) {
             log.error("Error in Config class: " + e.getMessage());
         }

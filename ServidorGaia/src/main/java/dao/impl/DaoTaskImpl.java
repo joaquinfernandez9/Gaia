@@ -3,14 +3,14 @@ package dao.impl;
 import dao.DaoTask;
 import dao.db.DaoDB;
 import dao.queries.Queries;
+import domain.model.Account;
 import domain.model.Task;
+import jakarta.ejb.Local;
 import jakarta.inject.Inject;
 import lombok.extern.log4j.Log4j2;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -26,20 +26,31 @@ public class DaoTaskImpl implements DaoTask {
     }
 
     @Override
-    public Task add(String taskName, String initialTime, String endTime, String username) {
+    public Task add(Task task) {
         try (Connection con = db.getConnection()) {
-            PreparedStatement ps = con.prepareStatement(Queries.INSERT_INTO_TASK_ID_TASK_NAME_INITIAL_TIME_END_TIME_COMPLETED_USERNAME_VALUES_0);
-            ps.setString(1, taskName);
-            ps.setString(2, initialTime);
-            ps.setString(3, endTime);
-            ps.setString(4, username);
-            ps.executeUpdate();
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                return new Task(rs.getInt("id"), rs.getString("task_name"), rs.getString("initial_time"), rs.getString("end_time"), rs.getInt("completed"), rs.getString("username"));
+            con.setAutoCommit(false);
+            if (task.getEndTime().isBefore(LocalDateTime.now())) {
+                throw new IllegalArgumentException("End time is in the past.");
             } else {
-                return null;
+                PreparedStatement ps = con.prepareStatement(Queries.INSERT_INTO_TASK_ID_TASK_NAME_INITIAL_TIME_END_TIME_COMPLETED_USERNAME_VALUES_0, Statement.RETURN_GENERATED_KEYS);
+                ps.setString(1, task.getTaskName());
+                ps.setTimestamp(2, Timestamp.valueOf(task.getInitTime()));
+                ps.setTimestamp(3, Timestamp.valueOf(task.getEndTime()));
+                ps.setString(4, task.getUsername());
+                ps.executeUpdate();
+                ResultSet rs = ps.getGeneratedKeys();
+                if (rs != null) {
+                    con.commit();
+                    return new Task(task.getTaskName(),
+                            task.getInitTime(),
+                            task.getEndTime(),
+                            0,
+                            task.getUsername());
+                } else {
+                    throw new SQLException("No keys generated");
+                }
             }
+
         } catch (Exception e) {
             log.error(e.getMessage());
             return null;
@@ -47,17 +58,13 @@ public class DaoTaskImpl implements DaoTask {
     }
 
     @Override
-    public Task get(String taskName, String username) {
+    public Task get(Task task) {
         try (Connection con = db.getConnection()) {
             PreparedStatement ps = con.prepareStatement(Queries.SELECT_FROM_TASK_WHERE_TASK_NAME_AND_USERNAME);
-            ps.setString(1, taskName);
-            ps.setString(2, username);
+            ps.setString(1, task.getTaskName());
+            ps.setString(2, task.getUsername());
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                return new Task(rs.getInt("id"), rs.getString("task_name"), rs.getString("initial_time"), rs.getString("end_time"), rs.getInt("completed"), rs.getString("username"));
-            } else {
-                return null;
-            }
+            return readRS(rs).get(0);
         } catch (Exception e) {
             log.error(e.getMessage());
             return null;
@@ -65,16 +72,17 @@ public class DaoTaskImpl implements DaoTask {
     }
 
     @Override
-    public Task delete(String taskName, String username) {
+    public Task delete(Task task) {
         try (Connection con = db.getConnection()) {
             PreparedStatement ps = con.prepareStatement(Queries.DELETE_FROM_TASK_WHERE_TASK_NAME_AND_USERNAME);
-            ps.setString(1, taskName);
-            ps.setString(2, username);
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                return new Task(rs.getInt("id"), rs.getString("task_name"), rs.getString("initial_time"), rs.getString("end_time"), rs.getInt("completed"), rs.getString("username"));
-            } else {
+            ps.setString(1, task.getTaskName());
+            ps.setString(2, task.getUsername());
+
+            int response = ps.executeUpdate();
+            if (response == 0) {
                 return null;
+            } else {
+                return task;
             }
         } catch (Exception e) {
             log.error(e.getMessage());
@@ -83,48 +91,44 @@ public class DaoTaskImpl implements DaoTask {
     }
 
     @Override
-    public List<Task> getAllByUser(String username) {
+    public List<Task> getAllByUser(Account account) {
         try (Connection con = db.getConnection()) {
+            List<Task> tasks;
             PreparedStatement ps = con.prepareStatement(Queries.SELECT_FROM_TASK_WHERE_USERNAME);
-            ps.setString(1, username);
+            ps.setString(1, account.getUsername());
             ResultSet rs = ps.executeQuery();
-            List<Task> tasks = new ArrayList<>();
-            while (rs.next()) {
-                tasks.add(new Task(rs.getInt("id"), rs.getString("task_name"), rs.getString("initial_time"), rs.getString("end_time"), rs.getInt("completed"), rs.getString("username")));
-            }
+            tasks = readRS(rs);
             return tasks;
-
         } catch (Exception e) {
             log.error(e.getMessage());
-            return null;
+            return Collections.emptyList();
         }
     }
 
     @Override
-    public Task update(String taskName, String username) {
+    public Task update(Task task) {
         try (Connection con = db.getConnection()) {
             try (PreparedStatement ps = con.prepareStatement(
                     Queries.UPDATE_TASK_SET_COMPLETED_1_WHERE_TASK_NAME_AND_USERNAME);
                  PreparedStatement ps2 = con.prepareStatement(
-                         Queries.UPDATE_TREE_SET_PROGRESS_PROGRESS_1_WHERE_USERNAME)) {
+                         Queries.UPDATE_TREE_SET_PROGRESS_PROGRESS_1_WHERE_USERNAME);
+                 PreparedStatement ps3 = con.prepareStatement(
+                         Queries.UPDATE_TREE_SET_PROGRESS_0_WHERE_USER
+                 )) {
                 con.setAutoCommit(false);
-                ps.setString(1, taskName);
-                ps.setString(2, username);
-                ps.executeUpdate();
-                ResultSet rs = ps.executeQuery();
-                if (rs.next()) {
-                    ps2.setString(1, username);
+                ps.setString(1, task.getTaskName());
+                ps.setString(2, task.getUsername());
+                int rs = ps.executeUpdate();
+                if (rs != 0) {
+                    ps2.setString(1, task.getUsername());
                     ps2.executeUpdate();
-                    if (checkIfLeveledUp(username)) {
+                    if (checkIfLeveledUp(task.getUsername())) {
+                        ps3.setString(1, task.getUsername());
+                        ps3.executeUpdate();
                         con.commit();
-                        return new Task(rs.getInt("id"),
-                                rs.getString("task_name"),
-                                rs.getString("initial_time"),
-                                rs.getString("end_time"),
-                                rs.getInt("completed"),
-                                rs.getString("username"));
                     } else {
-                        return null;
+                        con.commit();
+                        return task;
                     }
                 } else {
                     return null;
@@ -140,6 +144,7 @@ public class DaoTaskImpl implements DaoTask {
             log.error(e.getMessage());
             return null;
         }
+        return null;
     }
 
     private boolean checkIfLeveledUp(String username) {
@@ -168,28 +173,26 @@ public class DaoTaskImpl implements DaoTask {
     }
 
     @Override
-    public List<Task> deleteCompletedTasks(String username) {
-        List<Task> response = new ArrayList<>();
+    public int deleteCompletedTasks(Account account) {
+
         try (Connection con = db.getConnection()) {
             PreparedStatement ps = con.prepareStatement(Queries.DELETE_FROM_TASK_WHERE_COMPLETED_1_AND_USERNAME);
-            ps.setString(1, username);
-            ResultSet rs = ps.executeQuery();
-            response = readRS(rs);
+            ps.setString(1, account.getUsername());
+            return ps.executeUpdate();
         } catch (Exception e) {
             log.error(e.getMessage());
-            return Collections.emptyList();
+            return 0;
         }
-        return response;
+
     }
 
     private List<Task> readRS(ResultSet rs) {
         List<Task> response = new ArrayList<>();
         try {
             while (rs.next()) {
-                response.add(new Task(rs.getInt("id"),
-                        rs.getString("task_name"),
-                        rs.getString("initial_time"),
-                        rs.getString("end_time"),
+                response.add(new Task(rs.getString("task_name"),
+                        rs.getTimestamp("init_time").toLocalDateTime(),
+                        rs.getTimestamp("end_time").toLocalDateTime(),
                         rs.getInt("completed"),
                         rs.getString("username")));
             }

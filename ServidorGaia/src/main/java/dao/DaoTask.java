@@ -1,19 +1,20 @@
 package dao;
 
+import domain.model.Account;
 import domain.model.Task;
 
 import java.util.List;
 
 public interface DaoTask {
-    Task add(String taskName, String initialTime, String endTime, String username);
+    Task add(Task task);
 
-    Task get(String taskName, String username);
+    Task get(Task task);
 
-    Task delete(String taskName, String username);
+    Task delete(Task task);
 
-    List<Task> getAllByUser(String username);
+    List<Task> getAllByUser(Account account);
 
-    Task update(String taskName, String username);
+    Task update(Task task);
 
-    List<Task> deleteCompletedTasks(String username);
+    int deleteCompletedTasks(Account account);
 }
