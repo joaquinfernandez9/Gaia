@@ -43,7 +43,12 @@ public class RestAccount {
     @POST
     @Path("/log")
     public Response login(Account acc) {
-        return Response.accepted(log.login(acc.getUsername(), acc.getPassword())).build();
+        Account account = log.login(acc.getUsername(), acc.getPassword());
+        if (account == null) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        } else {
+            return Response.accepted(log.login(acc.getUsername(), acc.getPassword())).build();
+        }
     }
 
     @POST

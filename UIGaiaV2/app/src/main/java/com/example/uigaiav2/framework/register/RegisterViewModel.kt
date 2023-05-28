@@ -9,6 +9,7 @@ import com.example.uigaiav2.utils.Utils
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -20,37 +21,46 @@ class RegisterViewModel @Inject constructor(
     private val _state: MutableStateFlow<RegisterState> by lazy {
         MutableStateFlow(RegisterState())
     }
-    val state: MutableStateFlow<RegisterState> get() = _state
+    val state: StateFlow<RegisterState> get() = _state
     fun handleEvent(event: RegisterEvent) {
         when (event) {
             is RegisterEvent.Register -> register(event.account)
         }
     }
 
+    fun clearError() {
+        _state.value = _state.value.copy(error = null)
+    }
+
+
     private fun register(acc: Account) {
         viewModelScope.launch {
             if (Utils.hasInternetConnection(context = appContext)) {
                 repo.register(acc).collect {
                     when (it) {
-                        is com.example.uigaiav2.utils.NetworkResult.Error -> {
-                            _state.value = _state.value.copy(
-                                error = it.message,
-                                boolean = false,
-                            )
-                        }
                         is com.example.uigaiav2.utils.NetworkResult.Success -> {
                             _state.value = _state.value.copy(
                                 error = null,
                                 boolean = true
                             )
                         }
-                        else -> {
+                        is com.example.uigaiav2.utils.NetworkResult.Error -> {
+                            _state.value = _state.value.copy(
+                                error = it.message,
+                                boolean = false
+                            )
+                        }
+                        is com.example.uigaiav2.utils.NetworkResult.Loading -> {
+                            _state.value = _state.value.copy(
+                                error = null,
+                                boolean = false
+                            )
                         }
                     }
                 }
             } else {
                 _state.value = _state.value.copy(
-                    error = "No hay conexión a internet",
+                    error = "No internet connection",
                 )
             }
         }

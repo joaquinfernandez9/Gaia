@@ -46,19 +46,33 @@ public class RestTask {
     @Path("/deleteTask/{username}/{taskName}")
     public Response deleteTask(@PathParam("username") String username, @PathParam("taskName") String taskName) {
         Task task = new Task(taskName, username);
-        return Response.ok(taskService.delete(task)).build();
+        Task tas2 = taskService.delete(task);
+        if (tas2 == null) {
+            return Response.status(404).build();
+        } else {
+            return Response.ok(tas2).build();
+        }
     }
 
     @GET
     @Path("/getTasks/{username}")
-    public List<Task> getTasks(@PathParam("username") String username) {
-        return taskService.get(new Account(username));
+    public Response getTasks(@PathParam("username") String username) {
+        List<Task> tasks = taskService.get(new Account(username));
+        if (tasks == null) {
+            return Response.status(404).build();
+        } else if (tasks.isEmpty()) {
+            return Response.status(204).build();
+        } else {
+            return Response.ok(tasks).build();
+        }
     }
 
     @PUT
     @Path("/updateTask")
-    public Task updateTask(Task task) {
-        return taskService.update(task);
+    public Response updateTask(Task task) {
+        Task taskResponse = taskService.update(task);
+        if (taskResponse == null) return Response.status(Response.Status.BAD_REQUEST).build();
+        else return Response.ok(taskResponse).build();
     }
 
     @DELETE

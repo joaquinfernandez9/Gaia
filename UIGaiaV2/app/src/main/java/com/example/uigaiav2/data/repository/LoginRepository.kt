@@ -1,6 +1,6 @@
 package com.example.uigaiav2.data.repository
 
-import com.example.uigaiav2.data.remote.login.LoginRemoteDataSource
+import com.example.uigaiav2.data.remote.LoginRemoteDataSource
 import com.example.uigaiav2.domain.model.Account
 import com.example.uigaiav2.domain.model.dto.AccountDTO
 import com.example.uigaiav2.utils.NetworkResult
@@ -18,6 +18,13 @@ class LoginRepository @Inject constructor(
         return flow {
             emit(NetworkResult.Loading())
             val result = remoteDataSource.login(acc)
+            if (result is NetworkResult.Success) {
+                result.data?.let {
+                    emit(result)
+                }
+            } else if (result is NetworkResult.Error) {
+                emit(result)
+            }
             emit(result)
         }.flowOn(Dispatchers.IO)
     }
@@ -27,6 +34,13 @@ class LoginRepository @Inject constructor(
         return flow {
             emit(NetworkResult.Loading())
             val result = remoteDataSource.register(acc)
+            if (result is NetworkResult.Success) {
+                result.data?.let {
+                    emit(result)
+                }
+            } else if (result is NetworkResult.Error) {
+                emit(result)
+            }
             emit(result)
         }.flowOn(Dispatchers.IO)
     }

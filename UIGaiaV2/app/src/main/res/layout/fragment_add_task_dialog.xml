@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/end_ca"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/startTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Time"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/cancelButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/startTimeButton"/>
+
+    <Button
+        android:id="@+id/startTimeButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Select Start Time"
+        app:layout_constraintEnd_toEndOf="@id/cancelButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startTimeText"
+        app:layout_constraintBottom_toTopOf="@id/endTimeText"/>
+
+    <TextView
+        android:id="@+id/endTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Time"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startTimeButton"
+        app:layout_constraintBottom_toTopOf="@id/endTimeButton"
+        app:layout_constraintEnd_toEndOf="@id/cancelButton"/>
+
+    <Button
+        android:id="@+id/endTimeButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Select End Time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endTimeText"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"
+        app:layout_constraintEnd_toEndOf="@id/cancelButton"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:text="Save"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toStartOf="@id/cancelButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endTimeButton" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:text="Cancel"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@id/endTimeButton"
+        app:layout_constraintStart_toEndOf="@id/saveButton"
+        app:layout_constraintTop_toBottomOf="@id/endTimeButton" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

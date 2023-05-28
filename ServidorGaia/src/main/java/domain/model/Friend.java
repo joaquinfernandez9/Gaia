@@ -6,15 +6,15 @@ import java.time.LocalDateTime;
 
 @Data
 public class Friend {
-    private String usuario1;
-    private String usuario2;
-    private int valor;
+    private String username1;
+    private String username2;
+    private int value;
     private LocalDateTime requestDate;
 
     public Friend(String usuario1, String usuario2, int valor, LocalDateTime fecha_solicitud) {
-        this.usuario1 = usuario1;
-        this.usuario2 = usuario2;
-        this.valor = valor;
+        this.username1 = usuario1;
+        this.username2 = usuario2;
+        this.value = valor;
         this.requestDate = fecha_solicitud;
     }
 

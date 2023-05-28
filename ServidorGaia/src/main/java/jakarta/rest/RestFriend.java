@@ -23,34 +23,52 @@ public class RestFriend {
 
     @POST
     @Path("/sendRequest/{username1}/{username2}")
-    public Friend sendRequest(@PathParam("username1") String username1, @PathParam("username2") String username2) {
-        return friend.sendRequest(username1, username2);
+    public Response sendRequest(@PathParam("username1") String username1, @PathParam("username2") String username2) {
+        Friend friendResponse = friend.sendRequest(username1, username2);
+        if (friendResponse == null) return Response.status(Response.Status.BAD_REQUEST).build();
+        else return Response.ok(friendResponse).build();
     }
 
     @POST
     @Path("/acceptRequest/{username1}/{username2}")
     public Response acceptRequest(@PathParam("username1") String username1, @PathParam("username2") String username2) {
-        friend.acceptRequest(username1, username2);
-        return Response.ok().build();
+        Friend friendResponse = friend.acceptRequest(username1, username2);
+        if (friendResponse == null) return Response.status(Response.Status.BAD_REQUEST).build();
+        else return Response.ok(friendResponse).build();
     }
 
     @DELETE
     @Path("/rejectRequest/{username1}/{username2}")
     public Response rejectRequest(@PathParam("username1") String username1, @PathParam("username2") String username2) {
-        friend.rejectRequest(username1, username2);
-        return Response.ok().build();
+        Friend friendResponse = friend.rejectRequest(username1, username2);
+        if (friendResponse == null) return Response.status(Response.Status.BAD_REQUEST).build();
+        else return Response.ok(friendResponse).build();
     }
 
     @GET
     @Path("/getFriends/{username}")
-    public List<Friend> getFriends(@PathParam("username") String username) {
-        return friend.getFriends(username);
+    public Response getFriends(@PathParam("username") String username) {
+        List<Friend> friends = friend.getFriends(username);
+        if (friends == null) {
+            return Response.status(404).build();
+        } else if (friends.isEmpty()) {
+            return Response.status(204).build();
+        } else {
+            return Response.ok(friends).build();
+        }
     }
 
     @GET
     @Path("/getRequests/{username}")
-    public List<Friend> getRequests(@PathParam("username") String username) {
-        return friend.getRequests(username);
+    public Response getRequests(@PathParam("username") String username) {
+        List<Friend> friends = friend.getRequests(username);
+        if (friends == null) {
+            return Response.status(404).build();
+        } else if (friends.isEmpty()) {
+            return Response.status(204).build();
+        } else {
+            return Response.ok(friends).build();
+        }
     }
 
 }

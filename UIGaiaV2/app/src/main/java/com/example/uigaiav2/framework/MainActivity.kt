@@ -14,6 +14,7 @@ import com.example.uigaiav2.databinding.ActivityMainBinding
 import com.example.uigaiav2.domain.model.Account
 import com.example.uigaiav2.framework.login.LoginEvent
 import com.example.uigaiav2.framework.login.LoginViewModel
+import com.google.firebase.FirebaseApp
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 import java.io.FileInputStream

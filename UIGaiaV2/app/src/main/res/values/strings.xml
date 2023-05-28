@@ -12,4 +12,7 @@
     <string name="register">Register</string>
     <string name="remember_me">Remember me!</string>
     <string name="new_account">New Account?</string>
+    <string name="progress_text">%1$d/100</string>
+    <string name="title_account">Account</string>
+    <string name="add_task_button">Add task button</string>
 </resources>

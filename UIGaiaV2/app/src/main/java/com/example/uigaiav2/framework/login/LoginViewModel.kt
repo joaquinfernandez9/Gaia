@@ -10,6 +10,7 @@ import com.example.uigaiav2.utils.Utils
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -22,12 +23,16 @@ class LoginViewModel @Inject constructor(
         MutableStateFlow(LoginState())
     }
 
-    val state: MutableStateFlow<LoginState> get() = _state
+    val state: StateFlow<LoginState> get() = _state
 
     fun handleEvent(event: LoginEvent){
         when(event){
             is LoginEvent.Login -> login(event.account)
         }
+    }
+
+    fun clearError(){
+        _state.value = _state.value.copy(error = null)
     }
 
     private fun login(acc: AccountDTO) {
@@ -47,12 +52,17 @@ class LoginViewModel @Inject constructor(
                                 boolean = true
                             )
                         }
-                        else -> {}
+                        is com.example.uigaiav2.utils.NetworkResult.Loading -> {
+                            _state.value = _state.value.copy(
+                                error = null,
+                                boolean = false
+                            )
+                        }
                     }
                 }
             } else {
                 _state.value = _state.value.copy(
-                    error = "No hay conexión a internet",
+                    error = "No internet connection",
                 )
             }
         }

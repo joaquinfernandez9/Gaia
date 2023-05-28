@@ -1,4 +1,7 @@
 package com.example.uigaiav2.domain.model
 
-class Tree {
-}
+data class Tree(
+    val username: String,
+    val level: Int,
+    val progress: Int,
+)

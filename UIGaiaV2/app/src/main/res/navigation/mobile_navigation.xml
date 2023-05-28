@@ -9,19 +9,20 @@
         android:id="@+id/navigation_tree"
         android:name="com.example.uigaiav2.framework.tree.TreeFragment"
         android:label="@string/title_tree"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_task"
         android:name="com.example.uigaiav2.framework.task.TaskFragment"
         android:label="@string/title_task"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_tasks" />
 
     <fragment
         android:id="@+id/navigation_friends"
         android:name="com.example.uigaiav2.framework.friend.FriendsFragment"
         android:label="@string/title_friend"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_friends" />
 
     <fragment
         android:id="@+id/navigation_login"

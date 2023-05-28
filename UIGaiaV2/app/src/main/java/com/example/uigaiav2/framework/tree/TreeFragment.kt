@@ -1,42 +1,122 @@
 package com.example.uigaiav2.framework.tree
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import com.example.uigaiav2.R
+import com.example.uigaiav2.crypt.CryptoManager
 import com.example.uigaiav2.databinding.FragmentHomeBinding
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.FirebaseApp
+import com.google.firebase.storage.FirebaseStorage
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import java.io.BufferedReader
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileReader
 
+@AndroidEntryPoint
 class TreeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private lateinit var _binding: FragmentHomeBinding
+    private val binding get() = _binding
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private val viewModel: TreeViewModel by viewModels()
+    private val cryptoManager = CryptoManager()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val treeViewModel =
-            ViewModelProvider(this).get(TreeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        FirebaseApp.initializeApp(requireContext())
+        getTree()
+        binding.waterButton.setOnClickListener {
+            Snackbar.make(
+                binding.root,
+                "Watering tree...",
+                Snackbar.LENGTH_SHORT
+            ).show()
 
-        val textView: TextView = binding.textHome
-        treeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
         }
-        return root
+        return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    private fun readTxt(): String {
+        var username = ""
+        val file = File(requireContext().filesDir, "not_secret.txt")
+        val secret = File(requireContext().filesDir, "secret.txt")
+        if (file.exists()) {
+            val bufferedReader = BufferedReader(FileReader(file))
+            val stringBuilder = StringBuilder()
+            var line: String? = bufferedReader.readLine()
+            while (line != null) {
+                stringBuilder.append(line)
+                line = bufferedReader.readLine()
+            }
+            val fileContent = stringBuilder.toString()
+            bufferedReader.close()
+            username = fileContent
+        } else if (secret.exists()) {
+            val fis = FileInputStream(secret)
+            val bytes = cryptoManager.decrypt(inputStream = fis)
+            val response = bytes.decodeToString()
+            val list = response.split(" ")
+            username = list[0]
+        }
+        return username
     }
+
+    private fun getTree() {
+        val username = readTxt()
+        with(binding) {
+            viewModel.handleEvent(TreeEvent.GetTree(username))
+            viewLifecycleOwner.lifecycleScope.launch {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    viewModel.state.collect { value ->
+                        if (value.error != null) {
+                            Snackbar.make(
+                                binding.root,
+                                "Can't load tree. Try again later.",
+                                Snackbar.LENGTH_SHORT
+                            ).show()
+                            viewModel.clearError()
+                        } else {
+                            val tree = value.tree
+                            val treeLvl = tree?.level //int to get img
+                            treeImageView.visibility = View.GONE
+                            progressBarImg.visibility = View.VISIBLE
+                            val storage = FirebaseStorage.getInstance()
+                            val storageRef = storage.reference
+                            val pathReference = storageRef.child("tree/$treeLvl.png")
+                            val localFile = File.createTempFile("images", "png")
+                            pathReference.getFile(localFile).addOnSuccessListener {
+                                val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
+                                treeImageView.setImageBitmap(bitmap)
+                                treeImageView.visibility = View.VISIBLE
+                                progressBarImg.visibility = View.GONE
+                            }
+                            // cargar barra progreso
+                            tree?.progress?.let { progressBar.progress = it }
+                            // cargar texto
+                            val progress = getString(R.string.progress_text, tree?.progress)
+                            progressText.text = progress
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
