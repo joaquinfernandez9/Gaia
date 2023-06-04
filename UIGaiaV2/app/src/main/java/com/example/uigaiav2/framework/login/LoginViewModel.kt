@@ -28,6 +28,7 @@ class LoginViewModel @Inject constructor(
     fun handleEvent(event: LoginEvent){
         when(event){
             is LoginEvent.Login -> login(event.account)
+            is LoginEvent.ClearError -> clearError()
         }
     }
 

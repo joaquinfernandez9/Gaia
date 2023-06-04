@@ -42,11 +42,51 @@ class TaskViewModel @Inject constructor(
 
     // TODO: with gestures
     private fun updateTask(task: TaskDTO) {
-        TODO("Not yet implemented")
+        val task = task.toTask()
+        viewModelScope.launch {
+            if (Utils.hasInternetConnection(context = appContext)) {
+                repoTask.updateTask(task).collect {
+                    when (it) {
+                        is com.example.uigaiav2.utils.NetworkResult.Error -> {
+                            _state.value = TaskState(error = it.message)
+                        }
+                        is com.example.uigaiav2.utils.NetworkResult.Success -> {
+                            _state.value = TaskState(error = null, task = it.data)
+                        }
+                        is com.example.uigaiav2.utils.NetworkResult.Loading -> {
+                            _state.value = TaskState(error = null)
+                        }
+                    }
+                }
+                getTasks(task.username)
+            } else {
+                _state.value = TaskState(error = "No internet connection")
+            }
+        }
     }
 
     private fun deleteTask(task: TaskDTO) {
-        TODO("Not yet implemented")
+        val task = task.toTask()
+        viewModelScope.launch {
+            if (Utils.hasInternetConnection(context = appContext)) {
+                repoTask.deleteTask(task).collect {
+                    when (it) {
+                        is com.example.uigaiav2.utils.NetworkResult.Error -> {
+                            _state.value = TaskState(error = it.message)
+                        }
+                        is com.example.uigaiav2.utils.NetworkResult.Success -> {
+                            _state.value = TaskState(error = null, task = it.data)
+                        }
+                        is com.example.uigaiav2.utils.NetworkResult.Loading -> {
+                            _state.value = TaskState(error = null)
+                        }
+                    }
+                }
+                getTasks(task.username)
+            } else {
+                _state.value = TaskState(error = "No internet connection")
+            }
+        }
     }
 
     private fun addTask(taskDTO: TaskDTO) {
@@ -67,6 +107,7 @@ class TaskViewModel @Inject constructor(
                         }
                     }
                 }
+                getTasks(task.username)
             } else {
                 _state.value = TaskState(error = "No internet connection")
             }

@@ -8,7 +8,7 @@ public class Queries {
     public static final String INSERT_INTO_TASK_ID_TASK_NAME_INITIAL_TIME_END_TIME_COMPLETED_USERNAME_VALUES_0 = "insert into task (task_name, init_time, end_time, completed, username) values (?, ?, ?, 0, ?)";
     public static final String SELECT_FROM_TASK_WHERE_TASK_NAME_AND_USERNAME = "select * from task where task_name = ? and username = ?";
     public static final String DELETE_FROM_TASK_WHERE_TASK_NAME_AND_USERNAME = "delete from task where task_name = ? and username = ?";
-    public static final String SELECT_FROM_TASK_WHERE_USERNAME = "select * from task where username = ?";
+    public static final String SELECT_FROM_TASK_WHERE_USERNAME = "select * from task where username = ? and completed = 0";
     public static final String UPDATE_TASK_SET_COMPLETED_1_WHERE_TASK_NAME_AND_USERNAME = "update task set completed = 1 where task_name = ? and username = ?";
     public static final String UPDATE_TREE_SET_PROGRESS_PROGRESS_1_WHERE_USERNAME = "update tree set progress = progress + 1 where username = ?";
     public static final String DELETE_FROM_TASK_WHERE_COMPLETED_1_AND_USERNAME = "delete from task where completed = 1 and username = ?";

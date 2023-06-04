@@ -15,4 +15,9 @@
     <string name="progress_text">%1$d/100</string>
     <string name="title_account">Account</string>
     <string name="add_task_button">Add task button</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="accept">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="name_friend_request">Name friend request</string>
 </resources>

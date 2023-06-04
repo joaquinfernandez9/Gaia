@@ -63,11 +63,12 @@ class TaskAdapter(val context: Context, private val actions: Actions) :
     val swipeGesture = object : SwipeGesture(context) {
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
             when (direction) {
-                ItemTouchHelper.RIGHT -> {
+                ItemTouchHelper.LEFT -> {
                     selectedItem.remove(getItem(viewHolder.adapterPosition))
                     actions.onClickDelete(getItem(viewHolder.adapterPosition))
                 }
-                ItemTouchHelper.LEFT -> {
+                ItemTouchHelper.RIGHT -> {
+                    selectedItem.remove(getItem(viewHolder.adapterPosition))
                     actions.onclickUpdate(getItem(viewHolder.adapterPosition))
                 }
             }

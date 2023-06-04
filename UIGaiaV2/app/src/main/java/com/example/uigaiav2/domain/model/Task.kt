@@ -15,7 +15,8 @@ data class Task(
         return TaskDTO(
             name = taskName,
             initTime = initTime,
-            endTime = endTime
+            endTime = endTime,
+            username = username,
         )
     }
 }

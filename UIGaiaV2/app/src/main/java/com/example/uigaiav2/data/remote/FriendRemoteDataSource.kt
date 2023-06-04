@@ -12,5 +12,7 @@ class FriendRemoteDataSource @Inject constructor(
     suspend fun declineRequest(username: String, friendUsername: String) = safeApiCall(apiCall = { api.rejectRequest(username, friendUsername) })
     suspend fun getFriends(username: String) = safeApiCall(apiCall = { api.getFriends(username) })
     suspend fun getRequests(username: String) = safeApiCall(apiCall = { api.getRequests(username) })
+    suspend fun getFriendsTree(username: String) = safeApiCall(apiCall = { api.getFriendsTree(username) })
+
 
 }

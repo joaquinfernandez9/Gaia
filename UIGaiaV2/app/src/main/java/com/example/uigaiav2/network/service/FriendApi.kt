@@ -1,5 +1,8 @@
 package com.example.uigaiav2.network.service
 
+import com.example.uigaiav2.domain.model.Friend
+import com.example.uigaiav2.domain.model.Task
+import com.example.uigaiav2.domain.model.Tree
 import retrofit2.Response
 import retrofit2.http.DELETE
 import retrofit2.http.GET
@@ -25,10 +28,13 @@ interface FriendApi {
     @GET("/ServidorGaia-1.0-SNAPSHOT/api/friend/getFriends/{username}")
     suspend fun getFriends(
         @Path("username") user: String
-    ): Response<List<String>>
+    ): Response<List<Friend>>
     @GET("/ServidorGaia-1.0-SNAPSHOT/api/friend/getRequests/{username}")
     suspend fun getRequests(
         @Path("username") user: String
-    ): Response<List<String>>
+    ): Response<List<Friend>>
+
+    @GET("/ServidorGaia-1.0-SNAPSHOT/api/friend/getFriendsTree/{username}")
+    suspend fun getFriendsTree(@Path("username") user: String): Response<List<Tree>>
 
 }

@@ -5,4 +5,5 @@ import com.example.uigaiav2.domain.model.dto.AccountDTO
 
 sealed interface LoginEvent {
     class Login(val account: AccountDTO) : LoginEvent
+    object ClearError : LoginEvent
 }

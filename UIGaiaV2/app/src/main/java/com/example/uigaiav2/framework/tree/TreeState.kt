@@ -6,4 +6,5 @@ data class TreeState (
     var error: String? = null,
     var boolean: Boolean = false,
     var tree: Tree? = null,
+    var completedTasks: Int? = 0
 )

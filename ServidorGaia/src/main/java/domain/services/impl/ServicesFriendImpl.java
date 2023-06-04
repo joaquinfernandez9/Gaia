@@ -2,6 +2,7 @@ package domain.services.impl;
 
 import dao.DaoFriend;
 import domain.model.Friend;
+import domain.model.Tree;
 import domain.services.ServicesFriend;
 import jakarta.inject.Inject;
 
@@ -15,6 +16,12 @@ public class ServicesFriendImpl implements ServicesFriend {
     public ServicesFriendImpl(DaoFriend dao) {
         this.dao = dao;
     }
+
+    @Override
+    public List<Tree> getFriendsTree(String username) {
+        return dao.getFriendsTree(username);
+    }
+
 
     @Override
     public Friend sendRequest(String username1, String username2) {

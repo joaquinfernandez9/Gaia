@@ -32,7 +32,9 @@ interface TaskApi {
     @PUT("/ServidorGaia-1.0-SNAPSHOT/api/task/updateTask")
     suspend fun updateTask(@Body task: Task): Response<Task>
 
-    @PUT("/ServidorGaia-1.0-SNAPSHOT/api/task/deleteCompletedTasks/{username}")
+    @DELETE("/ServidorGaia-1.0-SNAPSHOT/api/task/deleteCompletedTasks/{username}")
     suspend fun deleteCompletedTasks(@Path("username") user: String): Response<Int>
+
+
 
 }

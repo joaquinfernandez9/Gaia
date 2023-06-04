@@ -19,10 +19,30 @@
         tools:layout="@layout/fragment_tasks" />
 
     <fragment
+        android:id="@+id/navigation_acoount"
+        android:name="com.example.uigaiav2.framework.accout.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
         android:id="@+id/navigation_friends"
         android:name="com.example.uigaiav2.framework.friend.FriendsFragment"
         android:label="@string/title_friend"
-        tools:layout="@layout/fragment_friends" />
+        tools:layout="@layout/fragment_friends" >
+        <action
+            android:id="@+id/action_navigation_friends_to_navigation_requests"
+            app:destination="@id/navigation_requests" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_requests"
+        android:name="com.example.uigaiav2.framework.friend.friendRequests.PetitionsFragment"
+        android:label="Requests"
+        tools:layout="@layout/fragment_petitions" >
+        <action
+            android:id="@+id/action_navigation_requests_to_navigation_friends"
+            app:destination="@id/navigation_friends" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_login"

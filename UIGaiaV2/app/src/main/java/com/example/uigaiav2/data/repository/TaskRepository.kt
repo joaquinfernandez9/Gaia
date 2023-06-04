@@ -3,8 +3,10 @@ package com.example.uigaiav2.data.repository
 import com.example.uigaiav2.data.remote.TaskRemoteDataSource
 import com.example.uigaiav2.domain.model.Task
 import com.example.uigaiav2.utils.NetworkResult
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
 class TaskRepository @Inject constructor(
@@ -22,7 +24,7 @@ class TaskRepository @Inject constructor(
             } else if (result is NetworkResult.Error) {
                 emit(result)
             }
-        }
+        }.flowOn(Dispatchers.IO)
     }
 
     fun getTask(task: Task): Flow<NetworkResult<Task>> {
@@ -36,7 +38,7 @@ class TaskRepository @Inject constructor(
             } else if (result is NetworkResult.Error) {
                 emit(result)
             }
-        }
+        }.flowOn(Dispatchers.IO)
     }
 
     fun deleteTask(task: Task): Flow<NetworkResult<Task>> {
@@ -50,7 +52,7 @@ class TaskRepository @Inject constructor(
             } else if (result is NetworkResult.Error) {
                 emit(result)
             }
-        }
+        }.flowOn(Dispatchers.IO)
     }
 
     fun getTasks(username: String): Flow<NetworkResult<List<Task>>> {
@@ -64,7 +66,7 @@ class TaskRepository @Inject constructor(
             } else if (result is NetworkResult.Error) {
                 emit(result)
             }
-        }
+        }.flowOn(Dispatchers.IO)
     }
 
     fun updateTask(task: Task): Flow<NetworkResult<Task>> {
@@ -78,7 +80,7 @@ class TaskRepository @Inject constructor(
             } else if (result is NetworkResult.Error) {
                 emit(result)
             }
-        }
+        }.flowOn(Dispatchers.IO)
     }
 
     fun deleteCompletedTasks(username: String): Flow<NetworkResult<Int>> {
@@ -92,7 +94,7 @@ class TaskRepository @Inject constructor(
             } else if (result is NetworkResult.Error) {
                 emit(result)
             }
-        }
+        }.flowOn(Dispatchers.IO)
     }
 
 }

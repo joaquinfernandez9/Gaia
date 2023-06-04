@@ -2,6 +2,7 @@ package jakarta.rest;
 
 
 import domain.model.Friend;
+import domain.model.Tree;
 import domain.services.ServicesFriend;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
@@ -58,6 +59,20 @@ public class RestFriend {
         }
     }
 
+    @GET
+    @Path("/getFriendsTree/{username}")
+    public Response getFriendsTree(@PathParam("username") String username) {
+        List<Tree> friends = friend.getFriendsTree(username);
+        if (friends == null) {
+            return Response.status(404).build();
+        } else if (friends.isEmpty()) {
+            return Response.status(204).build();
+        } else {
+            return Response.ok(friends).build();
+        }
+    }
+
+    //TODO: solo muestra peticiones donde username1 es el parametro
     @GET
     @Path("/getRequests/{username}")
     public Response getRequests(@PathParam("username") String username) {

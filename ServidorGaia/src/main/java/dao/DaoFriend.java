@@ -1,10 +1,13 @@
 package dao;
 
 import domain.model.Friend;
+import domain.model.Tree;
 
 import java.util.List;
 
 public interface DaoFriend {
+
+    List<Tree> getFriendsTree(String username);
 
     Friend sendRequest(String username1, String username2);
 

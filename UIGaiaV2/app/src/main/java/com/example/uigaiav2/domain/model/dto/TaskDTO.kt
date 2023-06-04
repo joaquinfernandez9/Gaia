@@ -7,14 +7,15 @@ import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities.Local
 data class TaskDTO(
     val name: String,
     val initTime: LocalDateTime,
-    val endTime: LocalDateTime
+    val endTime: LocalDateTime,
+    val username: String,
 ) {
     fun toTask(): Task {
         return Task(
             taskName = name,
             initTime = initTime,
             endTime = endTime,
-            username = "username",
+            username = username,
             id = 0,
             completed = 0
         )

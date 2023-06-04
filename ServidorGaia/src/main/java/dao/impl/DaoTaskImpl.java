@@ -122,14 +122,13 @@ public class DaoTaskImpl implements DaoTask {
                 if (rs != 0) {
                     ps2.setString(1, task.getUsername());
                     ps2.executeUpdate();
+                    con.commit();
                     if (checkIfLeveledUp(task.getUsername())) {
                         ps3.setString(1, task.getUsername());
                         ps3.executeUpdate();
-                        con.commit();
-                    } else {
-                        con.commit();
-                        return task;
                     }
+                    con.commit();
+                    return task;
                 } else {
                     return null;
                 }
@@ -144,7 +143,6 @@ public class DaoTaskImpl implements DaoTask {
             log.error(e.getMessage());
             return null;
         }
-        return null;
     }
 
     private boolean checkIfLeveledUp(String username) {
@@ -159,8 +157,8 @@ public class DaoTaskImpl implements DaoTask {
                 if (progress == 100) {
                     PreparedStatement ps2 = con.
                             prepareStatement(Queries.UPDATE_TREE_SET_PROGRESS_0_LEVEL_LEVEL_PLUS_1_WHERE_USERNAME);
-                    ps2.setString(1, username);
-                    ps2.setInt(2, level + 1);
+                    ps2.setString(2, username);
+                    ps2.setInt(1, level + 1);
                     ps2.executeUpdate();
                     return true;
                 }

@@ -1,5 +1,6 @@
 package com.example.uigaiav2.framework.tree
 
+import android.content.Context.MODE_PRIVATE
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,24 +12,22 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.uigaiav2.R
-import com.example.uigaiav2.crypt.CryptoManager
+import com.example.uigaiav2.domain.usecases.crypt.CryptoManager
 import com.example.uigaiav2.databinding.FragmentHomeBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseApp
 import com.google.firebase.storage.FirebaseStorage
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import java.io.BufferedReader
 import java.io.File
 import java.io.FileInputStream
-import java.io.FileReader
 
 @AndroidEntryPoint
 class TreeFragment : Fragment() {
 
     private lateinit var _binding: FragmentHomeBinding
     private val binding get() = _binding
-
+    private lateinit var currentUser: String
     private val viewModel: TreeViewModel by viewModels()
     private val cryptoManager = CryptoManager()
 
@@ -40,47 +39,16 @@ class TreeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         FirebaseApp.initializeApp(requireContext())
+        currentUser = cryptoManager.readTxt(requireContext())
         getTree()
-        binding.waterButton.setOnClickListener {
-            Snackbar.make(
-                binding.root,
-                "Watering tree...",
-                Snackbar.LENGTH_SHORT
-            ).show()
 
-        }
         return binding.root
     }
 
-    private fun readTxt(): String {
-        var username = ""
-        val file = File(requireContext().filesDir, "not_secret.txt")
-        val secret = File(requireContext().filesDir, "secret.txt")
-        if (file.exists()) {
-            val bufferedReader = BufferedReader(FileReader(file))
-            val stringBuilder = StringBuilder()
-            var line: String? = bufferedReader.readLine()
-            while (line != null) {
-                stringBuilder.append(line)
-                line = bufferedReader.readLine()
-            }
-            val fileContent = stringBuilder.toString()
-            bufferedReader.close()
-            username = fileContent
-        } else if (secret.exists()) {
-            val fis = FileInputStream(secret)
-            val bytes = cryptoManager.decrypt(inputStream = fis)
-            val response = bytes.decodeToString()
-            val list = response.split(" ")
-            username = list[0]
-        }
-        return username
-    }
 
     private fun getTree() {
-        val username = readTxt()
         with(binding) {
-            viewModel.handleEvent(TreeEvent.GetTree(username))
+            viewModel.handleEvent(TreeEvent.GetTree(currentUser))
             viewLifecycleOwner.lifecycleScope.launch {
                 repeatOnLifecycle(Lifecycle.State.STARTED) {
                     viewModel.state.collect { value ->
@@ -90,12 +58,13 @@ class TreeFragment : Fragment() {
                                 "Can't load tree. Try again later.",
                                 Snackbar.LENGTH_SHORT
                             ).show()
-                            viewModel.clearError()
-                        } else {
+                            viewModel.handleEvent(TreeEvent.ClearError)
+                        } else if (value.tree != null){
                             val tree = value.tree
                             val treeLvl = tree?.level //int to get img
                             treeImageView.visibility = View.GONE
                             progressBarImg.visibility = View.VISIBLE
+                            //FirebaseApp.initializeApp(requireContext())
                             val storage = FirebaseStorage.getInstance()
                             val storageRef = storage.reference
                             val pathReference = storageRef.child("tree/$treeLvl.png")
@@ -115,8 +84,41 @@ class TreeFragment : Fragment() {
                     }
                 }
             }
+
+            waterButton.setOnClickListener {
+                Snackbar.make(
+                    binding.root,
+                    "Watering tree...",
+                    Snackbar.LENGTH_SHORT
+                ).show()
+
+                viewModel.handleEvent(TreeEvent.DeleteCompletedTasks(currentUser))
+                viewLifecycleOwner.lifecycleScope.launch {
+                    repeatOnLifecycle(Lifecycle.State.STARTED) {
+                        viewModel.state.collect { value ->
+                            if (value.error != null) {
+                                Snackbar.make(
+                                    binding.root,
+                                    "Can't load tree. Try again later.",
+                                    Snackbar.LENGTH_SHORT
+                                ).show()
+                                viewModel.handleEvent(TreeEvent.ClearError)
+                            } else {
+                                Snackbar.make(
+                                    binding.root,
+                                    "Tasks completed: ${value.completedTasks} since last time.",
+                                    Snackbar.LENGTH_SHORT
+                                ).show()
+                                viewModel.handleEvent(TreeEvent.ClearCompletedTasks)
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
+
+
 
 
 }

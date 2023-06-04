@@ -1,14 +1,11 @@
 package com.example.uigaiav2.framework.login
 
+import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -16,9 +13,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.uigaiav2.R
-import com.example.uigaiav2.crypt.CryptoManager
+import com.example.uigaiav2.domain.usecases.crypt.CryptoManager
 import com.example.uigaiav2.databinding.FragmentLoginBinding
-import com.example.uigaiav2.domain.model.Account
 import com.example.uigaiav2.domain.model.dto.AccountDTO
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -44,13 +40,13 @@ class LoginFragment : Fragment() {
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        readTxt()
+        autoLogin()
         setOnClicks()
 
         return binding.root
     }
 
-    private fun readTxt() {
+    private fun autoLogin() {
         with(binding) {
             loading.visibility = View.VISIBLE
             val file = File(requireContext().filesDir, "secret.txt")
@@ -63,13 +59,13 @@ class LoginFragment : Fragment() {
                 viewLifecycleOwner.lifecycleScope.launch {
                     repeatOnLifecycle(Lifecycle.State.STARTED) {
                         viewModel.state.collect { state ->
-                            if (!state.boolean) {
+                            if (state.error != null) {
                                 Snackbar.make(
                                     requireView(),
                                     "Something went wrong",
                                     Snackbar.LENGTH_SHORT
                                 ).show()
-                                viewModel.clearError()
+                                viewModel.handleEvent(LoginEvent.ClearError)
                             } else {
                                 Snackbar.make(
                                     requireView(),
@@ -110,17 +106,16 @@ class LoginFragment : Fragment() {
                         password = passText.text.toString()
                     )
                     viewModel.handleEvent(LoginEvent.Login(acc))
-
                     viewLifecycleOwner.lifecycleScope.launch {
                         repeatOnLifecycle(Lifecycle.State.STARTED) {
                             viewModel.state.collect { state ->
-                                if (!state.boolean) {
+                                if (state.error!= null) {
                                     Toast.makeText(
                                         requireContext(),
                                         "Wrong username or password",
                                         Toast.LENGTH_SHORT
                                     ).show()
-                                    viewModel.clearError()
+                                    viewModel.handleEvent(LoginEvent.ClearError)
                                 } else {
                                     if (rememberMe.isChecked) {
                                         with(context) {
@@ -135,6 +130,14 @@ class LoginFragment : Fragment() {
                                             cryptoManager.encrypt(bytes = bytes, outputStream = fos)
                                                 .decodeToString()
                                         }
+                                    } else {
+                                        val sharedPreferences = requireContext().getSharedPreferences(
+                                            "sharedPrefs",
+                                            MODE_PRIVATE
+                                        )
+                                        val editor = sharedPreferences.edit()
+                                        editor.putString("username", nameText.text.toString())
+                                        editor.apply()
                                     }
                                     findNavController().navigate(R.id.action_navigation_login_to_navigation_tree)
                                 }

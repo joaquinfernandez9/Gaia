@@ -5,6 +5,7 @@ import dao.db.DaoDB;
 import dao.queries.Queries;
 import domain.error.AmbiguousRequestException;
 import domain.model.Friend;
+import domain.model.Tree;
 import jakarta.inject.Inject;
 import lombok.extern.log4j.Log4j2;
 import domain.error.DataBaseDownException;
@@ -25,6 +26,30 @@ public class DaoFriendImpl implements DaoFriend {
         this.db = db;
     }
 
+
+    @Override
+    public List<Tree> getFriendsTree(String username) {
+        try (Connection con = db.getConnection()) {
+            PreparedStatement ps = con.prepareStatement(
+                    "SELECT t.username, t.level, t.progress " +
+                            "FROM friends f " +
+                            "JOIN tree t ON f.username1 = t.username OR f.username2 = t.username " +
+                            "WHERE (f.username1 = ? OR f.username2 = ?) " +
+                            "AND (f.username1 != ? OR f.username2 != ?) " +
+                            "AND t.username != ?"
+            );
+            ps.setString(1, username);
+            ps.setString(2, username);
+            ps.setString(3, username);
+            ps.setString(4, username);
+            ps.setString(5, username);
+            ResultSet rs = ps.executeQuery();
+            return readRsTree(rs);
+        } catch (SQLException e) {
+            DaoFriendImpl.log.error(e.getMessage());
+            throw new DataBaseDownException(e.getMessage());
+        }
+    }
 
 
     @Override
@@ -179,6 +204,18 @@ public class DaoFriendImpl implements DaoFriend {
             ));
         }
         return friends;
+    }
+
+    private List<Tree> readRsTree(ResultSet rs) throws SQLException {
+        List<Tree> trees = new ArrayList<>();
+        while (rs.next()) {
+            trees.add(new Tree(
+                    rs.getString("username"),
+                    rs.getInt("level"),
+                    rs.getInt("progress")
+            ));
+        }
+        return trees;
     }
 
 
