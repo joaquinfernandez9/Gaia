@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_tree"
+        android:icon="@drawable/tree_ico"
+        android:title="@string/title_tree" />
+    <item
+        android:id="@+id/navigation_task"
+        android:icon="@drawable/tasks_ico"
+        android:title="@string/title_task" />
+    <item
+        android:id="@+id/navigation_friends"
+        android:icon="@drawable/friends_ico"
+        android:title="@string/title_friend" />
+</menu>

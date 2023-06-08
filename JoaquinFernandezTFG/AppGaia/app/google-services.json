@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "660292666357",
+    "firebase_url": "https://gaia-8b409-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "gaia-8b409",
+    "storage_bucket": "gaia-8b409.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660292666357:android:d24ff90281066e190816bc",
+        "android_client_info": {
+          "package_name": "com.example.uigaiav2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU8ADCu8_r78D10YFVE4rJ7bq5X-q2uMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

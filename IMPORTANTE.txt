@@ -1,0 +1,101 @@
+INTRODUCCION IMPORTANTE
+
+
+- Descripción:
+	- ¿Qué es Gaia?
+	Gaia es una aplicación que ha sido desarrollada para ayudar a las 
+	personas para que sean capaces de gestionar su tiempo y sus
+	tareas de manera mas efectiva.
+	- ¿Por qué he hecho esta aplicación?
+	Tal como vivimos hoy en dia, en un mundo rodeados de distracciones
+	y estímulos, hay personas a las que les cuesta más dedicar el tiempo
+	realmente necesario a cada una de las tareas importantes que tiene que 
+	completar, por eso he desarrollado esta aplicación, para que cada 
+	persona pueda organizar sus tareas de manera más efectiva.
+	- ¿Por qué he elegido esta sobre las otras ideas que tenía?
+	Las otras ideas para aplicación que tenia eran una aplicación que consistia
+	en un mapa en la que el usuario podria visualizar rapidamente las fuentes de 
+	agua que tuviera cerca y la otra idea era sobre una aplicación en la que se 
+	podian hacer posts sobre animales que necesiten ayuda.
+	Decidí quedarme con esta sobre esas dos ya que las veo más como proyecto a 
+	futuro, me gustaria aprender aún mas y poder hacerlas lo mejor posible.
+
+PALABRAS CLAVE: Gestion de tareas, distracciones, estimulos, organizar.
+
+- Login:
+	- Esta pantalla es la que se ocupa de toda la funcionalidad del inicio de
+	sesión y de mantener esa sesión activa durante todo el uso de la aplicación.
+	Esto lo he hecho funcionar gracias al 'Switch' de remember me, si está activo
+	crea un archivo en el que se almacenan las credenciales del usuario y 
+	será leido cada vez que el usuario entre en la aplicación, de lo contrario, 
+	si no está activo, guarda un archivo temporal en el telefono que almacenará
+	unicamente su nombre de usuario para el correcto funcionamiento de la aplicación.
+
+PALABRAS CLAVE: Sesión activa, 'Remember me', archivo, credenciales.
+
+- Registro: 
+	- Esta pantalla se encarga de crear una cuenta para el usuario a partir de un nombre,
+	una contraseña y su email. Se comprueba correctamente que las contraseñas coinciden y 
+	el email sea un correo válido. Una vez comprobadas y validadas estas credenciales, el 
+	usuario recibirá un mensaje al correo introducido el cual tendra un enlace a una pagina
+	desde la que activará su cuenta y asi poder acceder a la aplicación.
+
+PALABRAS CLAVE: comprobación, válido, activación.
+
+- Árbol: 
+	- Esta pantalla es la que anima al usuario gracias a sus metodos de superación y 
+	progreso. Cada usuario tiene un árbol asignado el cual va subiendo de nivel siguiendo
+	las tareas que el mismo usuario se asigna y completa. Cada tarea completada supone un 
+	incremento en el progreso y al completar la barra el nivel del arbol aumenta y crece.
+
+PALABRAS CLAVE: superación, progreso, nivel, crecimiento.
+
+- Perfil:
+	- Esta pantalla se sirve para que el usuario pueda subir una foto de perfil, ya sea
+	una imagen seleccionada de la galería o una foto hecha en el momento con la camara.
+	Estas imagenes se almacenan en una base de datos y cada vez que el usuario las solicite
+	serán bajadas al dispositivo. 
+	Esta pantalla tambien tiene la funcionalidad de cerrar sesión, la cual borra el archivo
+	que contiene las credenciales del usuario y lo envía a la pantalla de 'Login'.
+
+PALABRAS CLAVE: galería, camara, firebase.
+
+- Tareas: 
+	- Esta pantalla es la principal de uso para el usuario, desde aqui podrá planificar 
+	las tareas que quiera completar, con su fecha de finalizacion. Cuando se acerque esa fecha, 
+	el usuario recibirá una notificación indicando que esa tarea va a caducar pronto, 
+	lo cual incitara al mismo a completarla.
+
+PALABRAS CLAVE: fecha, notificación.
+	
+- Social:
+	- Esta pantalla contiene una lista con los amigos que tiene dicho usuario, mostrando
+	el nivel y progreso de cada uno. Tambien tiene una funcionalidad para mandar solicitudes
+	al resto de usuarios y ver y aceptar o declinar las peticiones de amistad que te han llegado a ti.
+
+PALABRAS CLAVE: amigos, progreso, solicitudes.
+
+- Conclusion:
+Para finalizar esta presentacion me gustaría dar mi opinión personal sobre como he avanzado 
+con este proyecto y lo que he ido aprendiendo. Me gustaría hacer enfasis en la capacidad que he 
+adquirido para no bloquearme cuando las cosas no avanzan como deberían y buscar otro punto de 
+vista. He conseguido desarrollarme como persona, tanto dentro como fuera del ambito del desarrollo.
+Sobre la aplicación me gustaria mejorar lo siguiente:
+	- La planificación que he seguido ha sido un poco caótica, pero a medida que iba
+	avanzando en el tiempo y en el desarrollo iba aprendiendo cosas y las iba aplicando 
+	a mi día a dia.
+
+Como añadidos a futuro a la aplicación:
+	- En la pantalla de los amigos, me gustaría haber conseguido que apareciera la foto de cada uno 
+	de los amigos añadidos. Ya que le daría al usuario un extra de motivación el ver a sus amigos
+	reflejados en la aplicación.
+	- Tambien me habria gustado añadir una funcionalidad la cual suponga recompensas diarias para
+	incitar al usuario a seguir completando sus tareas propuestas.
+	- Como he aprendido en las prácticas de trabajo, me gustaria haber desarrollado las pruebas
+	de la aplicación antes que nada, para comprobar que todo iba correctamente. Tambien me habria
+	gustado conseguir una mayor cobertura del codigo por numero de lineas.
+
+PALABRAS CLAVE: punto de vista, desarrollarme, planificación, aprendizaje.
+
+
+INTRO: 

@@ -61,7 +61,7 @@ public class RestAccount {
             sendEmail.generateAndSendEmail(
                     account.getEmail(),
                     "Para activar su cuenta haga click en el siguiente enlace: " +
-                            "<a href=\"http://192.168.1.102:8080/ServidorGaia-1.0-SNAPSHOT/activate?codigo=" + activationCode+ "\"> Activar cuenta </a>",
+                            "<a href=\"http://192.168.1.103:8080/ServidorGaia-1.0-SNAPSHOT/activate?codigo=" + activationCode+ "\"> Activar cuenta </a>",
                     "Activacion de cuenta"
             );
             return Response.status(Response.Status.CREATED).entity(account).build();

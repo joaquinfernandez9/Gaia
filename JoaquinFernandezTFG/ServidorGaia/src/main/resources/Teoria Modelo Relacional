@@ -1,0 +1,70 @@
+- Cuenta.
+Contiene email, contraseña y username. Se usa para hacer el login.
+- Verificar.
+Se usa el email para que una vez clickeado el link que se ha enviado
+se cambie el parametro verificado.
+El parametro verificado puede tener 3 valores: 0 (no verificado),
+1 (verificado) y 2 (caducado).
+Una vez enviado el mail para verificar, hay que comprobar que se verifica
+la cuenta en los proximos 15 minutos. Si no se verifica, el parametro pasa a 2.
+Tambien hay un valor token para que el link que se envia sea único.
+- Arbol
+Esta tabla contiene los valores de username, nivel del arbol y el
+progreso que lleva del nivel actual.
+Con el usuario estando logeado, cada vez que se complete una tarea el
+se sumará en valor 1 hasta llegar al maximo de cada nivel, cuando eso suceda,
+el nivel se incrementa en 1 y el progreso vuelve a 0.
+- Amigos
+Esta tabla contiene los valores usuario 1 y usuario 2.
+Sirve para tener una lista con las tareas completadas de
+los amigos que tenga cada usuario.
+Tambien hay un parametro Valor que indica 0 si la solicitud de amistad
+está pendiente, 1 si ha sido aceptada y 2 si ha sido rechazada.
+(intentar buscar manera para que a x hora del dia se borren las solicitudes con valor 2)
+Dos parámetros nuevos que contienen la fecha en la que se ha enviado la solicitud y la fecha en la que
+se ha aceptado la solicitud.
+- Tareas
+Esta tabla contiene los valroes Id, nombre tarea, hora comienzo,
+hora final, completada (0 ó 1) y username.
+Sirve para tener una lista con las tareas que tiene cada usuario y saber si las completa.
+
+CREATE TABLE Cuenta (
+    email VARCHAR(255) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
+    username VARCHAR(255) PRIMARY KEY NOT NULL,
+    token VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Verificar (
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    verificado TINYINT NOT NULL DEFAULT 0,
+    fecha_creacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (email, token)
+);
+
+CREATE TABLE Arbol (
+    username VARCHAR(255) NOT NULL,
+    nivel INT NOT NULL,
+    progreso INT NOT NULL DEFAULT 0,
+    PRIMARY KEY (username)
+);
+
+CREATE TABLE Amigos (
+    usuario1 VARCHAR(255) NOT NULL,
+    usuario2 VARCHAR(255) NOT NULL,
+    valor TINYINT NOT NULL DEFAULT 0,
+    fecha_solicitud TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (usuario1, usuario2)
+);
+
+CREATE TABLE Tareas (
+    id INT NOT NULL AUTO_INCREMENT,
+    nombre_tarea VARCHAR(255) NOT NULL,
+    hora_inicio TIME NOT NULL,
+    hora_fin TIME NOT NULL,
+    completada TINYINT NOT NULL DEFAULT 0,
+    username VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (username) REFERENCES Cuenta(username)
+);

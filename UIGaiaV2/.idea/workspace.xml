@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7727d7d4-e939-4176-8a75-5567f9c747db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/0/5/0525723d74e43dbcd3d86e820f62ee781c8a2936" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/1/0/10cf36ec2b12ef28ffa981d9683f14539ba6ecba" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/1/4/1463a9fd7f07584c1f18e5ab56702a76c15e6bde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/1/9/19f85ffc0956902875c57ada479e113f3393ac39" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/1/d/1dbe0cce471b206583080c0f234d48fca8727c6a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/2/6/2649b56ff2ed68e9f439a522f2f01e85cb31b1a3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/2/c/2c0ea9a4296ac5873bd06695b2ad1e7e260f532b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/2/c/2c32e4c261d18ab6e4e285f18c25f2e8ca6fdeb1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/2/f/2fcf49f84eb78dcdec1359f769d2849c5e75819c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/4/6/464405afea94fac5c68f6500be2093a9b1c0db51" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/5/6/56a5f426a1e438757ea04c9c00fa171e09bfe3ad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/5/7/57ce2507759d991e3e297eb41898718c6fbfba2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/5/9/59fa5c8a3bb263372da589d67576c9048973f8c6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/6/4/6404437f43bb3f1ae17098c3fa93b1072f78741c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/7/f/7f577f9691af66c790b1c8a0ac2bd4d2b78fc36d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/9/1/91a280459ca18edb5ce206f0d0ee6f8b1fc5b56b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/9/3/93beb367b8c477588434308d4cf63c4d4921a732" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/9/d/9d9fc7220479ac3274b96e479331b8d0d95d35e6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/a/1/a165ebc7baa6737ef6564523d2804caf9226e019" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/a/5/a55a134bb93bfefddb0bae04a14809b2826579f8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/a/a/aaa923c080d1e09bb8f39713a5b65ae1e4518b05" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/c/1/c12997f7653ff183acf7c2ba622b99dab23d0f08" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/c/6/c6957bc08c5a078ea012892167ebe48ec234f32e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/e/c/ec3ce779129a3aa8e17714b67c41a37985acea4c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/f/0/f0f8912c1aebb45ab79565dbe149fea16382996f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/f/b/fb03e5caf9ac59a536560d23a7bdf8df7d2f91fa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/f/b/fb207b32d74c143f0722b3d8598d216f6ff2550b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/f/f/ff86ddc170fe7f829df659da01023b9e21101594" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/0/5/0525723d74e43dbcd3d86e820f62ee781c8a2936" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/1/0/10cf36ec2b12ef28ffa981d9683f14539ba6ecba" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/1/4/1463a9fd7f07584c1f18e5ab56702a76c15e6bde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/1/9/19f85ffc0956902875c57ada479e113f3393ac39" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/1/d/1dbe0cce471b206583080c0f234d48fca8727c6a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/2/6/2649b56ff2ed68e9f439a522f2f01e85cb31b1a3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/2/c/2c0ea9a4296ac5873bd06695b2ad1e7e260f532b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/2/c/2c32e4c261d18ab6e4e285f18c25f2e8ca6fdeb1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/2/f/2fcf49f84eb78dcdec1359f769d2849c5e75819c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/4/6/464405afea94fac5c68f6500be2093a9b1c0db51" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/5/6/56a5f426a1e438757ea04c9c00fa171e09bfe3ad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/5/7/57ce2507759d991e3e297eb41898718c6fbfba2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/5/9/59fa5c8a3bb263372da589d67576c9048973f8c6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/6/4/6404437f43bb3f1ae17098c3fa93b1072f78741c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/7/f/7f577f9691af66c790b1c8a0ac2bd4d2b78fc36d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/9/1/91a280459ca18edb5ce206f0d0ee6f8b1fc5b56b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/9/3/93beb367b8c477588434308d4cf63c4d4921a732" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/9/d/9d9fc7220479ac3274b96e479331b8d0d95d35e6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/a/1/a165ebc7baa6737ef6564523d2804caf9226e019" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/a/5/a55a134bb93bfefddb0bae04a14809b2826579f8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/a/a/aaa923c080d1e09bb8f39713a5b65ae1e4518b05" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/c/1/c12997f7653ff183acf7c2ba622b99dab23d0f08" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/c/6/c6957bc08c5a078ea012892167ebe48ec234f32e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/e/c/ec3ce779129a3aa8e17714b67c41a37985acea4c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/f/0/f0f8912c1aebb45ab79565dbe149fea16382996f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/f/b/fb03e5caf9ac59a536560d23a7bdf8df7d2f91fa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/f/b/fb207b32d74c143f0722b3d8598d216f6ff2550b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/f/f/ff86ddc170fe7f829df659da01023b9e21101594" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/remote/FriendRemoteDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/remote/LoginRemoteDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/remote/TaskRemoteDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/remote/TreeRemoteDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/remote/response/BaseApiResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/repository/FriendRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/repository/LoginRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/repository/TaskRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/data/repository/TreeRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/di/NetworkModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/model/Account.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/model/Friend.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/model/Task.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/model/Tree.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/model/dto/AccountDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/model/dto/TaskDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/usecases/crypt/CryptoManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AlarmItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AlarmReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AlarmScheduler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AndroidAlarmScheduler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/GaiaApp.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/accout/AccountFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/accout/AccountState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/friend/friendRequests/PetitionsAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/friend/friendRequests/PetitionsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/friend/friendRequests/PetitionsState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/login/LoginEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/login/LoginFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/login/LoginState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/login/LoginViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/register/RegisterEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/register/RegisterFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/register/RegisterState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/register/RegisterViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/swipe/SwipeGesture.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/task/TaskAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/task/TaskEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/task/TaskFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/task/TaskState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/task/TaskViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/tree/TreeEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/tree/TreeFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/tree/TreeState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/framework/tree/TreeViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/network/service/AccountApi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/network/service/FriendApi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/network/service/TaskApi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/network/service/TreeApi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/utils/Config.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/utils/NetworkResult.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/java/com/example/uigaiav2/utils/Utils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-hdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-hdpi/ic_friends_social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-hdpi/ic_tasks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-mdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-mdpi/ic_friends_social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-mdpi/ic_tasks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xhdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xhdpi/ic_friends_social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xhdpi/ic_tasks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xxhdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xxhdpi/ic_friends_social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xxhdpi/ic_tasks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xxxhdpi/ic_action_name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xxxhdpi/ic_friends_social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable-xxxhdpi/ic_tasks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/account_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/arbol_login_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/bonsai.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/completed_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/custom_progress_bar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/friends.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/friends_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/ic_plus_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/tasks_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/trash_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/trash_ico_v.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/tree.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/tree_ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/drawable/watering_can_icon_png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/fragment_account.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/fragment_add_task_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/fragment_friends.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/fragment_petitions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/fragment_register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/fragment_tasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/item_friend.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/item_petition.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/layout/item_task.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-hdpi/ic_trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-mdpi/ic_trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xhdpi/ic_trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xxhdpi/ic_trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/mipmap-xxxhdpi/ic_trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppGaia/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServidorGaia/src/test/java/gherkin/ServiceFriendsGherkin.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServidorGaia/src/test/java/gherkin/ServiceTreeGherkin.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServidorGaia/src/test/java/service/ServiceLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServidorGaia/src/test/java/service/ServiceTaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/issuestore/3/a/3add5ffd9e4c675e24360a4f166f56a92689c87e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/issuestore/4/0/40aad48c0da141cd59640d562a7839ea1c3517c0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/issuestore/4/4/4439ae9c2b3469aa4b21a4d7ca282fa028724979" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/issuestore/6/2/62d46beff6429d6e67a81108eadc0b85fa992ddb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/issuestore/f/f/ff22330c7906f4523be1255e51d39bb64f2a11b9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/securityhotspotstore/3/a/3add5ffd9e4c675e24360a4f166f56a92689c87e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/securityhotspotstore/4/0/40aad48c0da141cd59640d562a7839ea1c3517c0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/securityhotspotstore/4/4/4439ae9c2b3469aa4b21a4d7ca282fa028724979" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/securityhotspotstore/6/2/62d46beff6429d6e67a81108eadc0b85fa992ddb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/securityhotspotstore/f/f/ff22330c7906f4523be1255e51d39bb64f2a11b9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/src/main/java/dao/impl/DaoLoginImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/src/main/java/dao/impl/DaoLoginImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/src/main/java/domain/services/impl/ServicesLoginImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/src/main/java/domain/services/impl/ServicesLoginImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/src/main/java/domain/services/mail/SendEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/src/main/java/domain/services/mail/SendEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/src/main/java/jakarta/rest/RestAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/src/main/java/jakarta/rest/RestAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/src/main/java/jakarta/rest/RestFriend.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/src/main/java/jakarta/rest/RestFriend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/src/main/resources/config/backlog.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/src/main/resources/config/backlog.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT/WEB-INF/classes/config/backlog.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT/WEB-INF/classes/config/backlog.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT/WEB-INF/classes/dao/impl/DaoLoginImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT/WEB-INF/classes/dao/impl/DaoLoginImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT/WEB-INF/classes/domain/services/impl/ServicesLoginImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT/WEB-INF/classes/domain/services/impl/ServicesLoginImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT/WEB-INF/classes/domain/services/mail/SendEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/ServidorGaia-1.0-SNAPSHOT/WEB-INF/classes/domain/services/mail/SendEmail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/classes/config/backlog.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/classes/config/backlog.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/classes/dao/impl/DaoLoginImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/classes/dao/impl/DaoLoginImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/classes/domain/services/impl/ServicesLoginImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/classes/domain/services/impl/ServicesLoginImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorGaia/target/classes/domain/services/mail/SendEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorGaia/target/classes/domain/services/mail/SendEmail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/issuestore/6/a/6a22c9df5f1867533b00002eaec788a5d1fba58d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/issuestore/7/8/783d9d362d0d958d9ad284cc99f24d05098063e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/issuestore/8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/issuestore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/securityhotspotstore/6/a/6a22c9df5f1867533b00002eaec788a5d1fba58d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/securityhotspotstore/7/8/783d9d362d0d958d9ad284cc99f24d05098063e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/securityhotspotstore/8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/securityhotspotstore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/securityhotspotstore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/androidTest/java/com/example/uigaia/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/arbol_login_ico-playstore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/domain/model/Account.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/domain/model/Friend.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/domain/model/Task.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/domain/model/Tree.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/framework/App.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/framework/compose/Activity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/framework/compose/login/Login.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/framework/compose/login/LoginContract.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/framework/compose/login/ViewModelLogin.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/network/AuthInterceptor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/network/service/AccountService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/network/service/FriendService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/network/service/TaskService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/network/service/TreeService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/ui/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/ui/theme/Shape.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/ui/theme/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/ui/theme/Type.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/utils/Config.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/utils/NetworkResult.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/java/com/example/uigaia/utils/Utils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-anydpi-v26/arbol_login_ico.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-anydpi-v26/arbol_login_ico_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-hdpi/arbol_login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-hdpi/arbol_login_ico_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-mdpi/arbol_login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-mdpi/arbol_login_ico_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xhdpi/arbol_login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xhdpi/arbol_login_ico_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xxhdpi/arbol_login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xxhdpi/arbol_login_ico_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xxxhdpi/arbol_login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xxxhdpi/arbol_login_ico_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/app/src/test/java/com/example/uigaia/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UIGaia/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/0525723d74e43dbcd3d86e820f62ee781c8a2936" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/10cf36ec2b12ef28ffa981d9683f14539ba6ecba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/1463a9fd7f07584c1f18e5ab56702a76c15e6bde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1dbe0cce471b206583080c0f234d48fca8727c6a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/2649b56ff2ed68e9f439a522f2f01e85cb31b1a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c0ea9a4296ac5873bd06695b2ad1e7e260f532b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c32e4c261d18ab6e4e285f18c25f2e8ca6fdeb1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2fcf49f84eb78dcdec1359f769d2849c5e75819c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/387c69575b372170b19644cd6f0ef7c2618e1dc9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/464405afea94fac5c68f6500be2093a9b1c0db51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/56a5f426a1e438757ea04c9c00fa171e09bfe3ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57ce2507759d991e3e297eb41898718c6fbfba2d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/582586f5908e11f774a7b9589363f26a91ab1db5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/59fa5c8a3bb263372da589d67576c9048973f8c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/6404437f43bb3f1ae17098c3fa93b1072f78741c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f577f9691af66c790b1c8a0ac2bd4d2b78fc36d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83efd64e4d21ac0268adacada06c74e345a7d02f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/907eb5733f25831a65f46587b7c87596890dd8cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/93beb367b8c477588434308d4cf63c4d4921a732" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d9fc7220479ac3274b96e479331b8d0d95d35e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a165ebc7baa6737ef6564523d2804caf9226e019" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a55a134bb93bfefddb0bae04a14809b2826579f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aaa923c080d1e09bb8f39713a5b65ae1e4518b05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c12997f7653ff183acf7c2ba622b99dab23d0f08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c6957bc08c5a078ea012892167ebe48ec234f32e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c86cac28f864aa9520d450cb7d25b45cae26c7d6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbc7f6d08af14e174a83d6b7cb7fa233e2cefd87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/ec3ce779129a3aa8e17714b67c41a37985acea4c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0f8912c1aebb45ab79565dbe149fea16382996f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/5/0525723d74e43dbcd3d86e820f62ee781c8a2936" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/0/10cf36ec2b12ef28ffa981d9683f14539ba6ecba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/4/1463a9fd7f07584c1f18e5ab56702a76c15e6bde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/d/1dbe0cce471b206583080c0f234d48fca8727c6a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/6/2649b56ff2ed68e9f439a522f2f01e85cb31b1a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/c/2c0ea9a4296ac5873bd06695b2ad1e7e260f532b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/c/2c32e4c261d18ab6e4e285f18c25f2e8ca6fdeb1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/f/2fcf49f84eb78dcdec1359f769d2849c5e75819c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/8/387c69575b372170b19644cd6f0ef7c2618e1dc9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/6/464405afea94fac5c68f6500be2093a9b1c0db51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/6/56a5f426a1e438757ea04c9c00fa171e09bfe3ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/7/57ce2507759d991e3e297eb41898718c6fbfba2d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/8/582586f5908e11f774a7b9589363f26a91ab1db5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/9/59fa5c8a3bb263372da589d67576c9048973f8c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/4/6404437f43bb3f1ae17098c3fa93b1072f78741c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/f/7f577f9691af66c790b1c8a0ac2bd4d2b78fc36d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/3/83efd64e4d21ac0268adacada06c74e345a7d02f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/0/907eb5733f25831a65f46587b7c87596890dd8cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/3/93beb367b8c477588434308d4cf63c4d4921a732" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/d/9d9fc7220479ac3274b96e479331b8d0d95d35e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/1/a165ebc7baa6737ef6564523d2804caf9226e019" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/5/a55a134bb93bfefddb0bae04a14809b2826579f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/a/aaa923c080d1e09bb8f39713a5b65ae1e4518b05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/1/c12997f7653ff183acf7c2ba622b99dab23d0f08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/6/c6957bc08c5a078ea012892167ebe48ec234f32e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/8/c86cac28f864aa9520d450cb7d25b45cae26c7d6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/b/cbc7f6d08af14e174a83d6b7cb7fa233e2cefd87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/c/ec3ce779129a3aa8e17714b67c41a37985acea4c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f0f8912c1aebb45ab79565dbe149fea16382996f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/uigaiav2/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/remote/FriendRemoteDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/remote/LoginRemoteDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/remote/TaskRemoteDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/remote/TreeRemoteDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/remote/response/BaseApiResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/repository/FriendRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/repository/LoginRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/repository/TaskRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/repository/TreeRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/di/NetworkModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/model/Account.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/model/Friend.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/model/Task.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/model/Tree.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/model/dto/AccountDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/model/dto/TaskDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/usecases/crypt/CryptoManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AlarmItem.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AlarmReceiver.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AlarmScheduler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AndroidAlarmScheduler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/GaiaApp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/accout/AccountFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/accout/AccountState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/example/AddProductActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/friend/FriendsViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/friend/friendRequests/PetitionsAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/friend/friendRequests/PetitionsFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/friend/friendRequests/PetitionsState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/login/LoginEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/login/LoginFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/login/LoginState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/login/LoginViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/register/RegisterEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/register/RegisterFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/register/RegisterState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/register/RegisterViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/swipe/SwipeGesture.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/task/TaskAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/task/TaskEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/task/TaskFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/task/TaskState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/task/TaskViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/tree/TreeEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/tree/TreeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/tree/TreeState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/tree/TreeViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/network/service/AccountApi.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/network/service/FriendApi.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/network/service/TaskApi.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/network/service/TreeApi.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/utils/Config.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/utils/NetworkResult.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/utils/Utils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_friends_social.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_tasks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_friends_social.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_tasks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_friends_social.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_tasks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_friends_social.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_tasks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_friends_social.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_tasks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/account_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/arbol_login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/completed_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/custom_progress_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/friends.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/friends_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_plus_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tasks_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/trash_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/trash_ico_v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tree.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tree_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/watering_can_icon_png.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_account.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_task_dialog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_friends.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_petitions.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_friend.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_petition.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_task.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/uigaiav2/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\joaqu\.android\avd\Pixel_6_Pro_API_33.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UIGaiaV2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UIGaiaV2" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UIGaiaV2" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UIGaiaV2" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Object" />
+        <option value="Kotlin Sealed Interface" />
+        <option value="resourceFile" />
+        <option value="valueResourceFile" />
+        <option value="Kotlin Interface" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+    <option name="sortByName" value="true" />
+  </component>
+  <component name="ProjectId" id="2Q6NTIOv5rE9bf1CU9CHsvEAXj7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ApkExportedModule": "UIGaiaV2.app",
+    "DEBUGGABLE_DEVICE": "samsung-sm_g965f-1cf1fae8c30d7ece",
+    "DEBUGGABLE_PROCESS": "com.example.uigaiav2",
+    "DEBUGGER_ID": "Auto",
+    "ResourceManagerPrefKey.ResourceType": "LAYOUT",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHOW_ALL_PROCESSES": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "android-custom-viewC:/Program Files/Java/jdk-17.0.2/bin/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
+    "android-custom-viewC:/Program Files/Java/jdk-17.0.2/bin/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.1/f0f93e67af3f7417bdd560d5142f6dec4fe629c3/recyclerview-1.2.1-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
+    "android-custom-viewC:/Program Files/Java/jdk-17.0.2/bin/caches/modules-2/files-2.1/com.google.android.material/material/1.9.0/8ad443d2a33a5bbdf4210e3964cf79cc5021f12a/material-1.9.0-sources.jar!/com/google/android/material/button/MaterialButton.java_SELECTED": "MaterialButton",
+    "android-custom-viewC:/Users/joaqu/AppData/Local/Android/Sdk/sources/android-33/android/view/View.java_SELECTED": "View",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "main",
+    "ignore.preview.features.used": "true",
+    "last_directory_selection": "C:/Users/joaqu/Documents/Gaia/UIGaiaV2/app/src/main/res/drawable",
+    "last_opened_file_path": "C:/Users/joaqu/Documents/Gaia/AppGaia",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "recommended.upgrade.last.time.stamp": "1686046207527",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\joaqu\Documents\Gaia\UIGaiaV2\app\src\main\res\drawable" />
+      <recent name="C:\Users\joaqu\Documents\Gaia\UIGaiaV2\app\src\main\java\com\example\uigaiav2\domain\usecases" />
+      <recent name="C:\Users\joaqu\Documents\Gaia\UIGaiaV2\app" />
+      <recent name="C:\Users\joaqu\Documents\Gaia\UIGaiaV2\app\src\androidTest\java" />
+      <recent name="C:\Users\joaqu\Documents\Gaia\UIGaiaV2\app\src\main\java\com\example\uigaiav2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\joaqu\Documents\Gaia\UIGaiaV2\app\src\main\res\drawable" />
+      <recent name="C:\Users\joaqu\Documents\Gaia\UIGaiaV2\app\src\main\java\com\example\uigaiav2\pics" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="com.example.uigaiav2.framework.friend.friendRequests" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.uigaiav2.domain.usecases.crypt" />
+      <recent name="com.example.uigaiav2.data.remote" />
+      <recent name="com.example.uigaiav2.data.remote.response" />
+      <recent name="com.example.uigaiav2.framework" />
+      <recent name="com.example.uigaiav2" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.uigaiav2.di" />
+      <recent name="com.example.uigaiav2.utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="MainActivity (1)" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
+      <module name="UIGaiaV2.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.uigaiav2.framework.MainActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainActivity" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
+      <module name="UIGaiaV2.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.uigaiav2.MainActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="UIGaiaV2.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android App.MainActivity (1)" />
+        <item itemvalue="Android App.MainActivity" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7727d7d4-e939-4176-8a75-5567f9c747db" name="Changes" comment="" />
+      <created>1684670077577</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684670077577</updated>
+      <workItem from="1686045098857" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/data/remote/LoginRemoteDataSource.kt</url>
+          <line>14</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AndroidAlarmScheduler.kt</url>
+          <line>20</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/domain/usecases/notification/AndroidAlarmScheduler.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/tree/TreeViewModel.kt</url>
+          <line>91</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/tree/TreeViewModel.kt</url>
+          <line>97</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint type="kotlin-function">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/network/service/AccountApi.kt</url>
+          <line>15</line>
+          <properties class="com.example.uigaiav2.network.service.AccountApi" method="register">
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/uigaiav2/framework/example/AddProductActivity.kt</url>
+          <line>243</line>
+          <properties class="com.example.uigaiav2.framework.example.AddProductActivity">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="AndroidRunConfigurationType">
+        <watch expression="_state" />
+        <watch expression="storageReference" />
+        <watch expression="taskAdapter" />
+        <watch expression="value.completedTasks" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
